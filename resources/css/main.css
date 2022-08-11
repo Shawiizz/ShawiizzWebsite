@@ -432,6 +432,7 @@ html, body {
 
     .myself .text p {
         font-size: 1.3em;
+        max-width: 95%;
     }
 
     .projects .cards {
