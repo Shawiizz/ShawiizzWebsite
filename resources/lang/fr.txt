@@ -1,0 +1,15 @@
+myself.1=Qui suis-je ?
+myself.2=Salut ! Je m'appelle Maël, aussi connu sous le nom de Shawiiz_z, et j'ai 18 ans. J'adore les nouvelles technologies et la programmation, et j'apprends à coder par moi-même depuis quelques années. J'ai déjà réalisé quelques projets personnels et aussi des projets en équipe. J'utilise principalement les langages JavaScript, Java, HTML et CSS, et j'aime la communauté open source ainsi que développer des projets avec mes amis.
+parcours.1=Mes etudes
+parcours.2=J'ai commencé à apprendre le code par moi-même en 2019, en faisant de la programmation en Java. Quand j'étais au lycée, j'ai prit la spécialité Système d'information et numérique de la filière STI2D pour en apprendre plus sur la programmation et les ordinateurs. Je vais faire un BUT Informatique dès l'année prochaine et continuer dans cette voie, pour ensuite travailler dans ce domaine.
+projects.1=Projets seul
+project.1=Github auto pull est un projet open source qui permet de synchroniser un repository GitHub dans un dossier local.
+project.2=Un projet open source qui permet d'automatiser le téléchargement de fichiers depuis un serveur avec une vérification des fichiers.
+project.3=Un projet open source qui permet aux développeurs Minecraft de télécharger les assets.
+project.4=Un petit projet de Lycée qui permet d'automatiser l'upload du menu du self en story Instagram chaque semaine.
+projects.2=Projets en équipe
+project.5=Mohist est un logiciel de serveur Minecraft combinant les mods et les plugins dans le même serveur.
+project.6=Pluméo est un réseau social, dont le code est privé pour l'instant. Je travaille sur ce projet avec un ami,<a href="https://vrock691.web.app">Vrock691</a>.
+contact.1=Vous pouvez me contacter via:
+contact.2=J'ai aussi un profil <a href="https://github.com/Shawiizz">GitHub</a>.
+footer.1=Shawiiz_z ©2022 — Site web portfolio
