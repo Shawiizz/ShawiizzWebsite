@@ -135,7 +135,7 @@ html, body {
     letter-spacing: 0.054em;
     font-weight: 600;
     max-width: 70%;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 .fixed-bg {
@@ -207,19 +207,19 @@ html, body {
     width: 40%;
     height: fit-content;
     border-radius: 10px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.3s ease-in-out;
 }
 
 .card:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
     width: 20px;
     height: auto;
     float: right;
-    margin-right:5px;
+    margin-right: 5px;
     padding-bottom: 5px;
 }
 
@@ -283,8 +283,7 @@ html, body {
 
 .contact .text a {
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.126em;
+    letter-spacing: 0.054em;
     font-weight: 200;
 }
 
@@ -312,6 +311,7 @@ html, body {
 
 .footer p {
     text-align: center;
+    font-weight: 100;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -364,12 +364,12 @@ html, body {
 
     .parcours, .myself, .contact, .projects {
         height: auto;
-        padding-top: 10vh !important;
+        padding-top: 16vh;
         margin-top: 0 !important;
     }
 
     .contact {
-        padding-bottom: 10vh;
+        padding-bottom: 16vh;
     }
 
     .contact .text h1 {
@@ -381,15 +381,11 @@ html, body {
     }
 
     .parcours .text p {
-        font-size: 1em;
+        font-size: 1.3em;
     }
 
     .myself .text p {
-        font-size: 1em;
-    }
-
-    .projects {
-        margin-top: 50vh;
+        font-size: 1.3em;
     }
 
     .projects .cards {
@@ -402,14 +398,21 @@ html, body {
         margin-bottom: 40px;
     }
 
-    .contact {
-        padding-top: 60vh;
-    }
-
     .projects .title-project {
         font-size: 25px;
     }
 
+    .head h1 {
+        font-size: 55px;
+        width: 310px;
+    }
+
+    .head h2 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
     .head h1 {
         font-size: 45px;
         width: 250px;
@@ -421,6 +424,10 @@ html, body {
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

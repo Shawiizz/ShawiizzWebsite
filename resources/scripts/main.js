@@ -6,20 +6,20 @@ arrowHeadElement.addEventListener('click', () => {
 })
 
 async function textAnimation(elm, text, wait, write, erase) {
-        for (let i = 0; i < text.length; i++) {
-            elm.innerText += text[i];
-            await new Promise(r => setTimeout(r, write || 200));
-        }
-        await new Promise(r => setTimeout(r, wait || 5000));
+    for (let i = 0; i < text.length; i++) {
+        elm.innerText += text[i];
+        await new Promise(r => setTimeout(r, write || 200));
+    }
+    await new Promise(r => setTimeout(r, wait || 5000));
 
-        for (let i = elm.innerText.length; i > 0; i--) {
-            if(elm.innerText.length === 1) {
-                elm.innerHTML = "&#8203;";
-            } else {
-                elm.innerText = elm.innerText.slice(0, -1);
-            }
-            await new Promise(r => setTimeout(r, erase || 100));
+    for (let i = elm.innerText.length; i > 0; i--) {
+        if (elm.innerText.length === 1) {
+            elm.innerHTML = "&#8203;";
+        } else {
+            elm.innerText = elm.innerText.slice(0, -1);
         }
+        await new Promise(r => setTimeout(r, erase || 100));
+    }
 }
 
 async function executeTextAnimations() {
