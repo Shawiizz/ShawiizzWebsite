@@ -1,6 +1,7 @@
 const titleElement = document.getElementById('username');
 const arrowHeadElement = document.getElementById('arrow-head');
 const dropBtnElement = document.getElementsByClassName('dropbtn')[0]
+const dropdownElement = document.getElementsByClassName('dropdown-content')[0]
 let currentLang = 'en'
 
 const savedLangs = new Map();
@@ -22,8 +23,8 @@ function parseLang(id) {
 
 for(const buttonLang of document.getElementsByClassName('dropdown-button')) {
     buttonLang.addEventListener('click', () => {
-        currentLang = buttonLang.id;
         setLang(buttonLang.id);
+        currentLang = buttonLang.id;
 
         const oldId = buttonLang.id;
         const oldText = buttonLang.innerText;
@@ -69,10 +70,11 @@ async function textAnimation(elm, text, wait, write, erase) {
 
 async function executeTextAnimations() {
     await textAnimation(titleElement, "Shawiiz_z");
-    await textAnimation(titleElement, "Welcome", 500, 100, 50);
-    await textAnimation(titleElement, "to", 200, 100, 50);
-    await textAnimation(titleElement, "my", 200, 100, 50);
-    await textAnimation(titleElement, "website", 500, 100, 50);
+    await parseLang('en')
+    await textAnimation(titleElement, savedLangs.get(currentLang).get('welcome'), 500, 100, 50);
+    await textAnimation(titleElement, savedLangs.get(currentLang).get('to'), 200, 100, 50);
+    await textAnimation(titleElement, savedLangs.get(currentLang).get('my'), 200, 100, 50);
+    await textAnimation(titleElement, savedLangs.get(currentLang).get('website'), 500, 100, 50);
     await textAnimation(titleElement, ":D", 200, 100, 100);
 
     await executeTextAnimations()

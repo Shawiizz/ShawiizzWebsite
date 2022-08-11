@@ -13,3 +13,7 @@ project.6=Pluméo est un réseau social, dont le code est privé pour l'instant.
 contact.1=Vous pouvez me contacter via:
 contact.2=J'ai aussi un profil <a href="https://github.com/Shawiizz">GitHub</a>.
 footer.1=Shawiiz_z ©2022 — Site web portfolio
+welcome=Bienvenue
+to=sur
+my=mon
+website=site
