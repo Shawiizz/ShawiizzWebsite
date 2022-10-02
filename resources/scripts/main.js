@@ -1,8 +1,8 @@
 const titleElement = document.getElementById('username');
 const arrowHeadElement = document.getElementById('arrow-head');
 const dropBtnElement = document.getElementsByClassName('dropbtn')[0]
-const dropdownElement = document.getElementsByClassName('dropdown-content')[0]
-let currentLang = 'en'
+
+let userLang = getLangCookie() || navigator.language || navigator.userLanguage;
 
 const savedLangs = new Map();
 
@@ -24,7 +24,7 @@ function parseLang(id) {
 for(const buttonLang of document.getElementsByClassName('dropdown-button')) {
     buttonLang.addEventListener('click', () => {
         setLang(buttonLang.id);
-        currentLang = buttonLang.id;
+        userLang = buttonLang.id;
 
         const oldId = buttonLang.id;
         const oldText = buttonLang.innerText;
@@ -35,14 +35,24 @@ for(const buttonLang of document.getElementsByClassName('dropdown-button')) {
     })
 }
 
+function loadDefaultLang() {
+    for (const buttonLang of document.getElementsByClassName('dropdown-button')) {
+        if(userLang.includes(buttonLang.id)) {
+            buttonLang.click()
+            return
+        }
+    }
+}
+
 function setLang(id) {
     const parsedLang = parseLang(id)
+    setLangCookie(id)
 
     for(const langElement of document.querySelectorAll("[keylang]")) {
         if(!parsedLang.has(langElement.getAttribute('keylang'))) {
             console.log('Missing keylang: '+langElement.getAttribute('keylang')+' in '+id+' lang.');
+            continue
         }
-        console.log(parsedLang.get(langElement.getAttribute('keylang')))
         langElement.innerHTML = parsedLang.get(langElement.getAttribute('keylang'))
     }
 }
@@ -68,16 +78,25 @@ async function textAnimation(elm, text, wait, write, erase) {
     }
 }
 
+function setLangCookie(id) {
+    document.cookie = `lang=${id}; path=/`;
+}
+
+function getLangCookie() {
+    return document.cookie.includes('lang=') ? document.cookie.split('lang=')[1].split(';')[0] : undefined
+}
+
 async function executeTextAnimations() {
     await textAnimation(titleElement, "Shawiiz_z");
     await parseLang('en')
-    await textAnimation(titleElement, savedLangs.get(currentLang).get('welcome'), 500, 100, 50);
-    await textAnimation(titleElement, savedLangs.get(currentLang).get('to'), 200, 100, 50);
-    await textAnimation(titleElement, savedLangs.get(currentLang).get('my'), 200, 100, 50);
-    await textAnimation(titleElement, savedLangs.get(currentLang).get('website'), 500, 100, 50);
+    await textAnimation(titleElement, savedLangs.get(userLang).get('welcome'), 500, 100, 50);
+    await textAnimation(titleElement, savedLangs.get(userLang).get('to'), 200, 100, 50);
+    await textAnimation(titleElement, savedLangs.get(userLang).get('my'), 200, 100, 50);
+    await textAnimation(titleElement, savedLangs.get(userLang).get('website'), 500, 100, 50);
     await textAnimation(titleElement, ":D", 200, 100, 100);
 
     await executeTextAnimations()
 }
 
 executeTextAnimations()
+loadDefaultLang()

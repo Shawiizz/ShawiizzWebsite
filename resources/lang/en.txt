@@ -8,7 +8,7 @@ project.2=An open source project that enable to automate the downloading of file
 project.3=An open source project that enable developers to download Minecraft assets.
 project.4=A tiny high school project that upload an Instagram story of the self menu of the week.
 projects.2=Team projects
-project.5=Mohist is an open Minecraft server software supporting Forge mods and Bukkit/Spigot plugins in the same server.
+project.5=Mohist is an open source Minecraft server software supporting Forge mods and Bukkit/Spigot plugins in the same server.
 project.6=Pluméo is a social network project, which is private for now. I am working on it with my friend,<a href="https://vrock691.web.app">Vrock691</a>.
 contact.1=You can talk to me using:
 contact.2=I also have a <a href="https://github.com/Shawiizz">GitHub</a> profile.
