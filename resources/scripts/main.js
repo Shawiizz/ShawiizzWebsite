@@ -7,21 +7,21 @@ let userLang = getLangCookie() || navigator.language || navigator.userLanguage;
 const savedLangs = new Map();
 
 function parseLang(id) {
-    if(savedLangs.has(id)) return savedLangs.get(id)
+    if (savedLangs.has(id)) return savedLangs.get(id)
 
     const xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", location.origin+'/resources/lang/'+id+'.txt', false ); // false for synchronous request
-    xmlHttp.send( null );
+    xmlHttp.open("GET", location.origin + '/resources/lang/' + id + '.txt', false); // false for synchronous request
+    xmlHttp.send(null);
     const langMap = new Map()
-    for(const line of xmlHttp.responseText.split('\n')) {
+    for (const line of xmlHttp.responseText.split('\n')) {
         const key = line.split('=')[0]
-        langMap.set(key, line.replace(key+'=', ''))
+        langMap.set(key, line.replace(key + '=', ''))
     }
     savedLangs.set(id, langMap)
     return langMap;
 }
 
-for(const buttonLang of document.getElementsByClassName('dropdown-button')) {
+for (const buttonLang of document.getElementsByClassName('dropdown-button')) {
     buttonLang.addEventListener('click', () => {
         setLang(buttonLang.id);
         userLang = buttonLang.id;
@@ -37,7 +37,7 @@ for(const buttonLang of document.getElementsByClassName('dropdown-button')) {
 
 function loadDefaultLang() {
     for (const buttonLang of document.getElementsByClassName('dropdown-button')) {
-        if(userLang.includes(buttonLang.id)) {
+        if (userLang.includes(buttonLang.id)) {
             buttonLang.click()
             return
         }
@@ -48,9 +48,9 @@ function setLang(id) {
     const parsedLang = parseLang(id)
     setLangCookie(id)
 
-    for(const langElement of document.querySelectorAll("[keylang]")) {
-        if(!parsedLang.has(langElement.getAttribute('keylang'))) {
-            console.log('Missing keylang: '+langElement.getAttribute('keylang')+' in '+id+' lang.');
+    for (const langElement of document.querySelectorAll("[keylang]")) {
+        if (!parsedLang.has(langElement.getAttribute('keylang'))) {
+            console.log('Missing keylang: ' + langElement.getAttribute('keylang') + ' in ' + id + ' lang.');
             continue
         }
         langElement.innerHTML = parsedLang.get(langElement.getAttribute('keylang'))

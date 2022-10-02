@@ -1,7 +1,7 @@
 myself.1=Who am I?
 myself.2=Hello, my name is Maël, also known as Shawiiz_z, and I'm 18 years old. I love computer science and programming, and I'm learning code by myself since a few years. I have realized some personal project and also team projects, and I'm mainly using JavaScript, Java, HTML and CSS languages. I like the open source community and developing projects with my friends.
 parcours.1=My studies
-parcours.2=I started to learn the code by myself in 2019, by practicing Java programming. When I was in high school, I took the Information and Digital Systems speciality to learn more about computers and programming. I'm going to do a Computer Science degree and continue my studies in this field, to make it my profession.
+parcours.2=I started to learn the code by myself in 2019, by practicing Java programming. When I was in high school, I took the Information and Digital Systems speciality to learn more about computers and programming. I am currently studying Computer Science at the IUT Lyon 1 and I plan to continue my studies in this field to make my career.
 projects.1=Solo projects
 project.1=Github auto pull is an open source project that can synchronize a GitHub repository in a local directory.
 project.2=An open source project that enable to automate the downloading of files from a server with a file checker.
