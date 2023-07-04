@@ -11,6 +11,7 @@
 ## About
 
 This is my portfolio website, it's a static website where I can show my projects and my skills.
+You can see the website here: [shawiizz.ml](https://shawiizz.ml)
 
 ## Getting Started
 
