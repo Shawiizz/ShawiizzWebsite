@@ -12,6 +12,8 @@ project.5=Mohist is an open source Minecraft server software supporting Forge mo
 project.6=Pluméo is a social network project, which is private for now. I am working on it with my friend,<a href="https://vrock691.web.app">Vrock691</a>.
 project.7=Open source api wrapper to communicate with your self-hosted PufferPanel installation.
 project.8=Another open source api wrapper to communicate with Tomuss (Lyon 1) to get your grades.
+project.9.name=MohistMC's website
+project.9=New MohistMC's website made with Next.js. <a href="https://new.mohistmc.com">https://new.mohistmc.com</a>
 contact.1=You can talk to me using:
 contact.2=I also have a <a href="https://github.com/Shawiizz">GitHub</a> profile.
 footer.1=Shawiiz_z ©2023 — Portfolio Website
