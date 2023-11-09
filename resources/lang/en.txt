@@ -1,5 +1,5 @@
 myself.1=Who am I?
-myself.2=Hello, my name is Maël, also known as Shawiiz_z, and I'm 18 years old. I love computer science and programming, and I'm learning code by myself since a few years. I have realized some personal project and also team projects, and I'm mainly using JavaScript, Java, HTML and CSS languages. I like the open source community and developing projects with my friends.
+myself.2=Hello, my name is Maël, also known as Shawiiz_z, and I'm 19 years old. I love computer science and programming, and I'm learning code by myself since a few years. I have realized some personal project and also team projects, and I'm mainly using JavaScript, Java, HTML and CSS languages. I like the open source community and developing projects with my friends.
 parcours.1=My studies
 parcours.2=I started to learn the code by myself in 2019, by practicing Java programming. When I was in high school, I took the Information and Digital Systems speciality to learn more about computers and programming. I am currently studying Computer Science at the IUT Lyon 1 and I plan to continue my studies in this field to make my career.
 projects.1=Solo projects
@@ -10,6 +10,8 @@ project.4=A tiny high school project that upload an Instagram story of the self 
 projects.2=Team projects
 project.5=Mohist is an open source Minecraft server software supporting Forge mods and Bukkit/Spigot plugins in the same server.
 project.6=Pluméo is a social network project, which is private for now. I am working on it with my friend,<a href="https://vrock691.web.app">Vrock691</a>.
+project.7=Open source api wrapper to communicate with your self-hosted PufferPanel installation.
+project.8=Another open source api wrapper to communicate with Tomuss (Lyon 1) to get your grades.
 contact.1=You can talk to me using:
 contact.2=I also have a <a href="https://github.com/Shawiizz">GitHub</a> profile.
 footer.1=Shawiiz_z ©2023 — Portfolio Website
