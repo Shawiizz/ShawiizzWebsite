@@ -6,14 +6,16 @@ import pcImage from '../../public/pc.svg'
 import contactImage from '../../public/contact.png'
 import schoolImage from '../../public/school.png'
 import shawiizzIcon from '@/app/favicon.ico'
-import { Card } from '@/components/home/Card'
+import { ProjectCard } from '@/components/home/ProjectCard'
 import { projects } from '@/util/Projects'
 import Link from 'next/link'
-import { Flowbite, Pagination } from 'flowbite-react'
+import { Flowbite, Pagination, Card } from 'flowbite-react'
 import React, { useState } from 'react'
 import { flowbiteTheme } from '@/util/FlowbiteTheme'
 import { useSelector } from 'react-redux'
 import { selectTheme } from '@/features/theme/ThemeSlice'
+import { skills } from '@/util/Skills'
+import SkillCard from '@/components/home/SkillCard'
 
 export default function Home() {
     const mode = useSelector(selectTheme)
@@ -73,12 +75,13 @@ export default function Home() {
                             {
                                 projects.personal.map((project, index) => {
                                     return (
-                                        <Card key={index} {...project} />
+                                        <ProjectCard key={index} {...project} />
                                     )
                                 })
                             }
                         </div>
-                        <Pagination currentPage={personalPage} totalPages={100} onPageChange={personalPageChange}
+                        <Pagination currentPage={personalPage} totalPages={projects.personal.length / 4}
+                                    onPageChange={personalPageChange}
                                     showIcons />
                     </div>
                     <div className={`teamGradient md:w-[40%] w-[90%] h-fit rounded-2xl drop-shadow-2xl`}>
@@ -88,9 +91,22 @@ export default function Home() {
                             {
                                 projects.team.map((project, index) => {
                                     return (
-                                        <Card key={index} {...project} />
+                                        <ProjectCard key={index} {...project} />
                                     )
                                 })
+                            }
+                        </div>
+                    </div>
+                </section>
+                <section className={`flex justify-evenly items-center md:w-full w-[80%] pt-20 pb-20`}>
+                    <div className={`text-center`}>
+                        <h2 className={`text-[4.5em] ${passionOne.className} skillsGradient font-semibold`}>Compétences</h2>
+                        <p className={`pt-5 tracking-[.054em] text-white font-semibold text-[1.5rem] leading-[1.2em] text-center`}>J'ai
+                            acquis plusieurs compétences dans le cadre de ma formation en BUT Informatique à l'IUT Lyon
+                            1.</p>
+                        <div className={`flex flex-row flex-wrap gap-10 justify-center mt-20 ml-5 mr-5`}>
+                            {
+                                skills.map((skill, index) => <SkillCard index={index} skill={skill}/>)
                             }
                         </div>
                     </div>
