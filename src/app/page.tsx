@@ -9,7 +9,7 @@ import shawiizzIcon from '@/app/favicon.ico'
 import { ProjectCard } from '@/components/home/ProjectCard'
 import { projects } from '@/util/data/Projects'
 import Link from 'next/link'
-import { Flowbite, Pagination, Card } from 'flowbite-react'
+import { Flowbite, Pagination, Card, Accordion } from 'flowbite-react'
 import React, { useState } from 'react'
 import { flowbiteTheme } from '@/util/FlowbiteTheme'
 import { useSelector } from 'react-redux'
@@ -17,6 +17,7 @@ import { selectTheme } from '@/features/theme/ThemeSlice'
 import { skills } from '@/util/data/Skills'
 import SkillCard from '@/components/home/SkillCard'
 import ProjectView from '@/components/home/ProjectView'
+import SkillAccordion from '@/components/home/SkillAccordion'
 
 export default function Home() {
     const mode = useSelector(selectTheme)
@@ -75,9 +76,7 @@ export default function Home() {
                             programmation à la gestion de projets, en passant par l'administration de systèmes
                             complexes.</p>
                         <div className={`flex flex-row flex-wrap gap-10 justify-center mt-20 ml-5 mr-5`}>
-                            {
-                                skills.map((skill, index) => <SkillCard skill={skill} key={index} />)
-                            }
+                            <SkillAccordion />
                         </div>
                     </div>
                 </section>
