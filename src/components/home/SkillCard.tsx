@@ -1,13 +1,12 @@
 import { Card } from 'flowbite-react'
 import React from 'react'
-import { Skill } from '@/util/Skills'
+import { Skill } from '@/util/data/Skills'
 
 export interface SkillCardProps {
-    index: number
     skill: Skill
 }
 
-export default function SkillCard({ index, skill }: SkillCardProps) {
+export default function SkillCard({skill }: SkillCardProps) {
     const [isExpanded, setIsExpanded] = React.useState(false)
 
     const onArrowClick = () => {
@@ -17,8 +16,8 @@ export default function SkillCard({ index, skill }: SkillCardProps) {
     }
 
     return (
-        <Card key={index} className='max-w-sm'>
-            <h5 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+        <Card className='max-w-sm'>
+            <h5 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white min-h-[3em]'>
                 {skill.name}
             </h5>
             <ul className={`list-disc ml-3 ${!isExpanded && 'hidden'} transition-opacity duration-500 ease-in-out`}>

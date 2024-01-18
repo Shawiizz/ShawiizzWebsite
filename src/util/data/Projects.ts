@@ -1,5 +1,5 @@
-import githubImage from '../../public/github.png'
-import plumeoImage from '../../public/plumeo.png'
+import githubImage from '../../../public/github.png'
+import plumeoImage from '../../../public/plumeo.png'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
 export interface Project {
@@ -34,6 +34,21 @@ export const projects: Projects = {
             name: 'LLA Menu Story',
             description: 'A tiny high school project that uploads an Instagram story of the self-menu of the week.',
             link: { href: 'https://github.com/Shawiizz/lla-menu-story', image: githubImage }
+        },
+        {
+            name: 'PufferPanel API Wrapper',
+            description: 'Open source api wrapper to communicate with your self-hosted PufferPanel installation.',
+            link: { href: 'https://github.com/Shawiizz/pufferpanel-api-wrapper', image: githubImage }
+        },
+        {
+            name: 'Tomuss API',
+            description: 'Another open source api wrapper to communicate with Tomuss (Lyon 1) to get your grades.',
+            link: { href: 'https://github.com/Shawiizz/tomuss-api', image: githubImage }
+        },
+        {
+            name: "MohistMC's website",
+            description: "New MohistMC's website made with Next.js. https://new.mohistmc.com",
+            link: { href: 'https://github.com/MohistMC/website', image: githubImage }
         }
     ],
     team: [

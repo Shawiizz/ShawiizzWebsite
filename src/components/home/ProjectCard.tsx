@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Project } from '@/util/Projects'
+import { Project } from '@/util/data/Projects'
 
 export const ProjectCard = ({ name, description, link }: Project) => {
     return (
-        <div className='card mb-10'>
+        <div className='card mb-10 cursor-pointer border border-white rounded-[10px] h-fit w-[40%] hover:shadow-lg transition-shadow duration-300 ease-in-out'>
             <h2 className={`text-white uppercase m-2.5 tracking-[.216em] text-base font-bold break-words`}>{name}</h2>
             <p className={`text-white break-words ml-2.5 font-normal mr-1 leading-[1.3em]`}>{description}</p>
             <Link href={link.href}>

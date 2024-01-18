@@ -7,23 +7,19 @@ import contactImage from '../../public/contact.png'
 import schoolImage from '../../public/school.png'
 import shawiizzIcon from '@/app/favicon.ico'
 import { ProjectCard } from '@/components/home/ProjectCard'
-import { projects } from '@/util/Projects'
+import { projects } from '@/util/data/Projects'
 import Link from 'next/link'
 import { Flowbite, Pagination, Card } from 'flowbite-react'
 import React, { useState } from 'react'
 import { flowbiteTheme } from '@/util/FlowbiteTheme'
 import { useSelector } from 'react-redux'
 import { selectTheme } from '@/features/theme/ThemeSlice'
-import { skills } from '@/util/Skills'
+import { skills } from '@/util/data/Skills'
 import SkillCard from '@/components/home/SkillCard'
+import ProjectView from '@/components/home/ProjectView'
 
 export default function Home() {
     const mode = useSelector(selectTheme)
-    const [personalPage, setPersonalPage] = useState(2)
-
-    const personalPageChange = () => {
-
-    }
 
     return (
         <Flowbite theme={{ theme: flowbiteTheme, mode }}>
@@ -38,7 +34,7 @@ export default function Home() {
                         <h2 className={`text-[4.5em] ${passionOne.className} myselfGradient font-semibold`}>Qui suis-je
                             ?</h2>
                         <p className={`pt-5 tracking-[.054em] max-w-4xl text-white font-semibold text-[1.7rem] leading-[1.2em]`}>Salut
-                            ! Je m'appelle Maël, aussi connu sous le nom de Shawiiz_z, et j'ai 18 ans. J'adore les
+                            ! Je m'appelle Maël, aussi connu sous le nom de Shawiiz_z, et j'ai 20 ans. J'adore les
                             nouvelles
                             technologies et la programmation, et j'apprends à coder par moi-même depuis quelques années.
                             J'ai déjà réalisé quelques projets personnels et aussi des projets en équipe. J'utilise
@@ -68,45 +64,19 @@ export default function Home() {
                 </section>
                 <section
                     className={`pt-20 pb-20 flex flex-col md:flex-row justify-center items-center md:justify-around gap-12`}>
-                    <div className={`personalGradient md:w-[40%] w-[90%] h-fit rounded-2xl drop-shadow-2xl`}>
-                        <h2 className={`text-white text-center mt-8 tracking-[.213em] uppercase text-3xl font-bold`}>Solo
-                            projects</h2>
-                        <div className={`flex justify-around w-full pt-12 flex-wrap`}>
-                            {
-                                projects.personal.map((project, index) => {
-                                    return (
-                                        <ProjectCard key={index} {...project} />
-                                    )
-                                })
-                            }
-                        </div>
-                        <Pagination currentPage={personalPage} totalPages={projects.personal.length / 4}
-                                    onPageChange={personalPageChange}
-                                    showIcons />
-                    </div>
-                    <div className={`teamGradient md:w-[40%] w-[90%] h-fit rounded-2xl drop-shadow-2xl`}>
-                        <h2 className={`text-center mt-8 tracking-[.213em] uppercase text-3xl text-white font-bold`}>Team
-                            projects</h2>
-                        <div className={`flex justify-around w-full pt-12 flex-wrap`}>
-                            {
-                                projects.team.map((project, index) => {
-                                    return (
-                                        <ProjectCard key={index} {...project} />
-                                    )
-                                })
-                            }
-                        </div>
-                    </div>
+                    <ProjectView projects={projects.personal} title={'Solo projects'} />
+                    <ProjectView projects={projects.team} title={'Team projects'} backgroundGradient={'teamGradient'} />
                 </section>
                 <section className={`flex justify-evenly items-center md:w-full w-[80%] pt-20 pb-20`}>
-                    <div className={`text-center`}>
+                    <div className={`flex flex-col justify-center items-center`}>
                         <h2 className={`text-[4.5em] ${passionOne.className} skillsGradient font-semibold`}>Compétences</h2>
-                        <p className={`pt-5 tracking-[.054em] text-white font-semibold text-[1.5rem] leading-[1.2em] text-center`}>J'ai
-                            acquis plusieurs compétences dans le cadre de ma formation en BUT Informatique à l'IUT Lyon
-                            1.</p>
+                        <p className={`pt-5 tracking-[.054em] text-white font-semibold text-[1.5rem] leading-[1.2em] text-center max-w-screen-md`}>Grâce
+                            à ma formation en BUT Informatique à l'IUT Lyon 1, j'ai acquis diverses compétences, de la
+                            programmation à la gestion de projets, en passant par l'administration de systèmes
+                            complexes.</p>
                         <div className={`flex flex-row flex-wrap gap-10 justify-center mt-20 ml-5 mr-5`}>
                             {
-                                skills.map((skill, index) => <SkillCard index={index} skill={skill}/>)
+                                skills.map((skill, index) => <SkillCard skill={skill} key={index} />)
                             }
                         </div>
                     </div>
