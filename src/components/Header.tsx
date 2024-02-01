@@ -28,13 +28,13 @@ const Header = () => {
                 </div>
                 <Navbar.Collapse>
                     <Navbar.Link href='#' active>
-                        Home
+                        {strings['header.home']}
                     </Navbar.Link>
-                    <Navbar.Link href='#'>About</Navbar.Link>
-                    <Navbar.Link href='#'>Studies</Navbar.Link>
-                    <Navbar.Link href='#'>Projects</Navbar.Link>
-                    <Navbar.Link href='#'>Skills</Navbar.Link>
-                    <Navbar.Link href='#'>Contact</Navbar.Link>
+                    <Navbar.Link href='#myself'>{strings['header.about']}</Navbar.Link>
+                    <Navbar.Link href='#studies'>{strings['header.studies']}</Navbar.Link>
+                    <Navbar.Link href='#projects'>{strings['header.projects']}</Navbar.Link>
+                    <Navbar.Link href='#skills'>{strings['header.skills']}</Navbar.Link>
+                    <Navbar.Link href='#contact'>{strings['header.contact']}</Navbar.Link>
                 </Navbar.Collapse>
             </Navbar>
         </Flowbite>

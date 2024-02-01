@@ -2,14 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.myselfGradient {
-    background: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+.text-gradient {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .parcoursGradient {
-    background: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    background: linear-gradient(180deg, #377cef 0%, #fa4bc8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

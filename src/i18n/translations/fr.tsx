@@ -31,6 +31,12 @@ const frTranslation = {
         "home.title.animation.4": "site web",
         "home.competences.title": "Compétences",
         "home.competences.text": "Grâce à ma formation en BUT Informatique à l'IUT Lyon 1, j'ai acquis diverses compétences, de la programmation à la gestion de projets, en passant par l'administration de systèmes complexes.",
+        "header.home": "Accueil",
+        "header.about": "À propos",
+        "header.studies": "Études",
+        "header.projects": "Projets",
+        "header.skills": "Compétences",
+        "header.contact": "Contact",
     }
 }
 

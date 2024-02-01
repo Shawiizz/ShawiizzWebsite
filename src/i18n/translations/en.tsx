@@ -33,6 +33,12 @@ const enTranslation: PartialLocaleState = {
         "home.title.animation.4": "website",
         "home.competences.title": "Skills",
         "home.competences.text": "Thanks to my studies in Computer Science at the IUT Lyon 1, I have acquired various skills, from programming to project management, including the administration of complex systems.",
+        "header.home": "Home",
+        "header.about": "About",
+        "header.studies": "Studies",
+        "header.projects": "Projects",
+        "header.skills": "Skills",
+        "header.contact": "Contact",
     }
 }
 
