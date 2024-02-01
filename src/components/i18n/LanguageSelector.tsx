@@ -4,7 +4,6 @@ import { LocaleState, selectTranslations, setLocale } from '@/features/i18n/Tran
 import { getLocales, locales } from '@/i18n/Language'
 import { Dropdown } from 'flowbite-react'
 import { useAppSelector } from '@/util/redux/Hooks'
-import { HiFlag } from 'react-icons/hi2'
 
 const LanguageSelector = () => {
     const strings = useAppSelector(selectTranslations)
@@ -31,7 +30,7 @@ const LanguageSelector = () => {
         <Dropdown label={strings['button.language']} color={'blue'}>
             {getLocales().available.map((locale, index) => {
                 return (
-                    <Dropdown.Item key={index} icon={HiFlag}
+                    <Dropdown.Item key={index} icon={locale.flag}
                                    className={`${locales.current.name === locale.name ? 'bg-blue-600' : ''}`}
                                    onClick={() => handleLanguageChange(locale)}>{locale.name}</Dropdown.Item>
                 )

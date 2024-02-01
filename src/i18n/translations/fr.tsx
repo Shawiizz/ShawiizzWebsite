@@ -1,6 +1,9 @@
+import FrenchFlag from '@/components/flags/FrenchFlag'
+
 const frTranslation = {
     name: "Français",
     initials: "fr",
+    flag: FrenchFlag,
     strings: {
         "home.subtitle": "PORTFOLIO",
         "home.section.1.title": "Qui suis-je ?",
@@ -29,6 +32,8 @@ const frTranslation = {
         "home.title.animation.2": "sur",
         "home.title.animation.3": "mon",
         "home.title.animation.4": "site web",
+        "home.competences.title": "Compétences",
+        "home.competences.text": "Grâce à ma formation en BUT Informatique à l'IUT Lyon 1, j'ai acquis diverses compétences, de la programmation à la gestion de projets, en passant par l'administration de systèmes complexes.",
     }
 }
 

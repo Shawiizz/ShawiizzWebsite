@@ -59,11 +59,8 @@ export default function Home() {
                 </section>
                 <section className={`flex justify-evenly items-center md:w-full w-[80%] pt-20 pb-20`}>
                     <div className={`flex flex-col justify-center items-center`}>
-                        <h2 className={`text-[4.5em] ${passionOne.className} skillsGradient font-semibold`}>Compétences</h2>
-                        <p className={`pt-5 tracking-[.054em] text-white font-semibold text-[1.5rem] leading-[1.2em] text-center max-w-screen-md`}>Grâce
-                            à ma formation en BUT Informatique à l'IUT Lyon 1, j'ai acquis diverses compétences, de la
-                            programmation à la gestion de projets, en passant par l'administration de systèmes
-                            complexes.</p>
+                        <h2 className={`text-[4.5em] ${passionOne.className} skillsGradient font-semibold`}>{strings['home.competences.title']}</h2>
+                        <p className={`pt-5 tracking-[.054em] text-white font-semibold text-[1.5rem] leading-[1.2em] text-center max-w-screen-md`}>G{strings['home.competences.text']}</p>
                         <div className={`flex flex-row flex-wrap gap-10 justify-center mt-20 ml-5 mr-5`}>
                             <SkillAccordion />
                         </div>

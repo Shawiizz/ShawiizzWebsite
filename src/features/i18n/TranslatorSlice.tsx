@@ -1,8 +1,8 @@
 import { AppState } from '@/util/redux/Store'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { locales } from '@/i18n/Language'
-import enTranslation from '@/i18n/translations/en'
 import frTranslation from '@/i18n/translations/fr'
+import React from 'react'
 
 // Use this interface for languages that are not yet fully translated (fallback to English, so it will never return undefined for any valid translation key)
 export type PartialLocaleState = Omit<LocaleState, 'strings'> & {
@@ -12,6 +12,7 @@ export type PartialLocaleState = Omit<LocaleState, 'strings'> & {
 export interface LocaleState {
     name: string;
     initials: string;
+    flag?: React.FC;
     strings: Record<StringKey, string>;
 }
 
