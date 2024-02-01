@@ -66,7 +66,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <section className={`flex text-center justify-around items-center ml-10 mr-10 pt-20 md:w-full w-80%`}>
+                <section className={`flex text-center justify-around items-center ml-10 mr-10 md:pt-20 md:w-full w-80%`}>
                     <div className={`text-left dark:text-white`}>
                         <h2 className={`text-[4.5em] ${passionOne.className} contactGradient font-semibold mb-5`}>{strings['home.section.contact.title']}</h2>
                         <p className={`pb-5 text-2xl tracking-[.054em] font-bold`}>{strings['home.section.contact.text']}</p>
