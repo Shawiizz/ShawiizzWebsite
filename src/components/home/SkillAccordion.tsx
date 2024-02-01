@@ -1,12 +1,15 @@
+'use client'
+
 import { Accordion } from 'flowbite-react'
 import React from 'react'
 import { skills } from '@/util/data/Skills'
+import { Random } from '@/util/Random'
 
 export default function SkillAccordion() {
     return (
-        <Accordion>
+        <Accordion key={Random.string(12)}>
             {
-                skills.map((skill, index) => <Accordion.Panel>
+                skills.map((skill, index) => <Accordion.Panel key={index}>
                     <Accordion.Title>{skill.name}</Accordion.Title>
                     <Accordion.Content>
                         <ul className={`list-disc ml-3 transition-opacity duration-500 ease-in-out`}>

@@ -2,29 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-    color: white;
-}
-
-.arrow {
-    box-sizing: border-box;
-    height: 5vw;
-    width: 5vw;
-    border-style: solid;
-    border-color: white;
-    border-width: 0px 1px 1px 0px;
-    transform: rotate(45deg);
-    transition: border-width 150ms ease-in-out;
-    bottom: 10%;
-    position: absolute;
-    animation: fadeIn 5s;
-}
-
-.arrow:hover {
-    border-bottom-width: 4px;
-    border-right-width: 4px;
-}
-
 .myselfGradient {
     background: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
     -webkit-background-clip: text;
@@ -35,11 +12,6 @@
     background: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.bgGradient {
-    background-color: #4158D0;
-    background-image: linear-gradient(black, #00001c);
 }
 
 .personalGradient {

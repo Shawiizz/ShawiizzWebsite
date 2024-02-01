@@ -18,7 +18,7 @@ export default function ProjectView({ projects, title, backgroundGradient }: Pro
 
     return (
         <div
-            className={`${backgroundGradient ?? 'personalGradient'} md:w-[40%] w-[90%] h-fit rounded-2xl drop-shadow-2xl flex flex-col items-center`}>
+            className={`${backgroundGradient ?? 'personalGradient'} md:w-[40%] w-[90%] h-full rounded-2xl drop-shadow-2xl flex flex-col items-center`}>
             <h2 className={`text-white text-center mt-8 tracking-[.213em] uppercase text-3xl font-bold`}>{title}</h2>
             <div className={`flex justify-around w-full pt-12 flex-wrap`}>
                 {

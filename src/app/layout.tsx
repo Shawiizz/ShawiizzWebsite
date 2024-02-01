@@ -18,7 +18,7 @@ export default function RootLayout({
     return (
         <html lang='fr'>
         <body className={quicksand.className}>
-        <div className={`fixed w-full h-screen bgGradient -z-10`}></div>
+        <div className={`fixed w-full h-screen dark:bg-[linear-gradient(black,#00001c)] -z-10`}></div>
         <Providers>
             <Header />
             {children}
