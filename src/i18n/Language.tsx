@@ -11,8 +11,8 @@ interface LocalesInterface {
 }
 
 export const locales: LocalesInterface = {
-    default: enTranslation,
-    current: enTranslation,
+    default: frTranslation,
+    current: frTranslation,
     available: availableLocales as LocaleState[]
 }
 
@@ -22,4 +22,8 @@ export const getCurrentLocale = () => {
         ...locales.current,
         strings: mergedStrings
     }
+}
+
+export const getLocales = () => {
+    return locales
 }

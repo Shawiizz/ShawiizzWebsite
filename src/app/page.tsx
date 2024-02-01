@@ -20,55 +20,42 @@ import ProjectView from '@/components/home/ProjectView'
 import SkillAccordion from '@/components/home/SkillAccordion'
 import AnimatedTitle from '@/components/home/AnimatedTitle'
 import Footer from '@/components/Footer'
+import { useAppSelector } from '@/util/redux/Hooks'
+import { selectTranslations } from '@/features/i18n/TranslatorSlice'
+import { getLocaleStringAsArgs } from '@/util/LocaleHelper'
 
 export default function Home() {
     const mode = useSelector(selectTheme)
+    const strings = useAppSelector(selectTranslations)
 
     return (
         <Flowbite theme={{ theme: flowbiteTheme, mode }}>
             <main className='flex min-h-screen flex-col items-center justify-between'>
                 <section className='flex flex-col justify-center items-center h-screen mb-20'>
-                    <AnimatedTitle/>
-                    <h2 className={`text-center text-gray-600 dark:text-white md:text-4xl text-3xl font-normal tracking-[.561em] mt-7`}>PORTFOLIO</h2>
-                    <div className={`box-border h-[5vw] w-[5vw] rotate-45 transition-[border-width] duration ease-[ease-in-out] absolute animate-[fadeIn_5s] border-solid border-black bottom-[10%] border-r-2 border-b-2 hover:border-r-4 hover:border-b-4 dark:border-white`}></div>
+                    <AnimatedTitle />
+                    <h2 className={`text-center text-gray-600 dark:text-white md:text-4xl text-3xl font-normal tracking-[.561em] mt-7`}>{strings['home.subtitle']}</h2>
+                    <div
+                        className={`box-border h-[5vw] w-[5vw] rotate-45 transition-[border-width] duration ease-[ease-in-out] absolute animate-[fadeIn_5s] border-solid border-black bottom-[10%] border-r-2 border-b-2 hover:border-r-4 hover:border-b-4 dark:border-white`}></div>
                 </section>
                 <section className={`flex justify-evenly items-center md:w-full w-[80%] pt-20 pb-20`}>
                     <div className={`text-center`}>
-                        <h2 className={`text-[4.5em] ${passionOne.className} myselfGradient font-semibold`}>Qui suis-je
-                            ?</h2>
-                        <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.7rem] leading-[1.2em]`}>Salut
-                            ! Je m'appelle Maël, aussi connu sous le nom de Shawiiz_z, et j'ai {new Date().getFullYear()-2004} ans. J'adore les
-                            nouvelles
-                            technologies et la programmation, et j'apprends à coder par moi-même depuis quelques années.
-                            J'ai déjà réalisé quelques projets personnels et aussi des projets en équipe. J'utilise
-                            principalement les langages JavaScript, Java, HTML et CSS, et j'aime la communauté open
-                            source
-                            ainsi que développer des projets avec mes amis.</p>
+                        <h2 className={`text-[4.5em] ${passionOne.className} myselfGradient font-semibold`}>{strings['home.section.1.title']}</h2>
+                        <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.7rem] leading-[1.2em]`}>{getLocaleStringAsArgs(strings['home.section.1.text'])[0]}{new Date().getFullYear() - 2004}{getLocaleStringAsArgs(strings['home.section.1.text'])[2]}</p>
                     </div>
                     <Image src={pcImage} alt={'Computer science'}
                            className={`hidden md:block w-[30vw] h-auto shadow mr-12`} />
                 </section>
                 <section className={`flex flex-row-reverse justify-evenly items-center md:w-full w-[80%] pt-20 pb-20`}>
                     <div className={`text-center`}>
-                        <h2 className={`text-[4.5em] ${passionOne.className} parcoursGradient font-semibold`}>Mes
-                            études</h2>
-                        <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.7rem] leading-[1.2em]`}>J'ai
-                            commencé à apprendre le code par moi-même en 2019, en faisant de la programmation en Java.
-                            Quand
-                            j'étais au lycée, j'ai prit la spécialité Système d'information et numérique de la filière
-                            STI2D
-                            pour en apprendre plus sur la programmation et les nouvelles technologies. Je suis
-                            actuellement
-                            en BUT Informatique à l'IUT Lyon 1 et je vais continuer dans cette voie, pour ensuite
-                            travailler
-                            dans l'informatique.</p>
+                        <h2 className={`text-[4.5em] ${passionOne.className} parcoursGradient font-semibold`}>{strings['home.section.2.title']}</h2>
+                        <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.7rem] leading-[1.2em]`}>{strings['home.section.2.text']}</p>
                     </div>
                     <Image src={schoolImage} alt={'School'} className={`hidden md:block w-[25vw] h-auto shadow`} />
                 </section>
                 <section
                     className={`pt-20 pb-20 flex flex-col md:flex-row justify-center items-stretch md:justify-around gap-12`}>
-                    <ProjectView projects={projects.personal} title={'Solo projects'} />
-                    <ProjectView projects={projects.team} title={'Team projects'} backgroundGradient={'teamGradient'} />
+                    <ProjectView projects={projects.personal} title={strings['projects.solo']} />
+                    <ProjectView projects={projects.team} title={strings['projects.team']} backgroundGradient={'teamGradient'} />
                 </section>
                 <section className={`flex justify-evenly items-center md:w-full w-[80%] pt-20 pb-20`}>
                     <div className={`flex flex-col justify-center items-center`}>
@@ -78,29 +65,31 @@ export default function Home() {
                             programmation à la gestion de projets, en passant par l'administration de systèmes
                             complexes.</p>
                         <div className={`flex flex-row flex-wrap gap-10 justify-center mt-20 ml-5 mr-5`}>
-                            <SkillAccordion/>
+                            <SkillAccordion />
                         </div>
                     </div>
                 </section>
                 <section className={`flex text-center justify-around items-center ml-10 mr-10 pt-20 md:w-full w-80%`}>
                     <div className={`text-left dark:text-white`}>
-                        <h2 className={`text-[4.5em] ${passionOne.className} contactGradient font-semibold mb-5`}>Contact</h2>
-                        <p className={`pb-5 text-2xl tracking-[.054em] font-bold`}>You can talk to me using:</p>
-                        <p>Discord: <Link href={`https://discord.com/users/436832490263412736`}
-                                          className={`decoration-0 tracking-[.054em] font-extralight`}>shawiiz_z</Link>
+                        <h2 className={`text-[4.5em] ${passionOne.className} contactGradient font-semibold mb-5`}>{strings['home.section.contact.title']}</h2>
+                        <p className={`pb-5 text-2xl tracking-[.054em] font-bold`}>{strings['home.section.contact.text']}</p>
+                        <p>{strings['home.section.contact.discord']} <Link
+                            href={`https://discord.com/users/436832490263412736`}
+                            className={`decoration-0 tracking-[.054em] font-extralight`}>shawiiz_z</Link>
                         </p>
-                        <p>Mail: <Link href={`mailto:shaweereso@gmail.com`}
-                                       className={`decoration-0 tracking-[.054em] font-extralight`}>shaweereso@gmail.com</Link>
+                        <p>{strings['home.section.contact.mail']} <Link href={`mailto:shaweereso@gmail.com`}
+                                                                        className={`decoration-0 tracking-[.054em] font-extralight`}>shaweereso@gmail.com</Link>
                         </p>
-                        <h3 className={`text-3xl tracking-[.054em] font-bold mt-10`}>I also have a <Link
-                            href={`https://github.com/Shawiizz`}
-                            className={`decoration-dotted tracking-[.054em] font-extralight underline`}>GitHub</Link> profile.
+                        <h3 className={`text-3xl tracking-[.054em] font-bold mt-10`}>{getLocaleStringAsArgs(strings['home.section.contact.github'])[0]}
+                            <Link
+                                href={`https://github.com/Shawiizz`}
+                                className={`decoration-dotted tracking-[.054em] font-extralight underline`}>{getLocaleStringAsArgs(strings['home.section.contact.github'])[1]}</Link>{getLocaleStringAsArgs(strings['home.section.contact.github'])[2]}
                         </h3>
                     </div>
                     <Image src={contactImage} alt={'Contact'}
                            className={`hidden md:block w-[30vw] h-auto shadow mb-20`} />
                 </section>
-                <Footer/>
+                <Footer />
             </main>
         </Flowbite>
     )

@@ -17,49 +17,49 @@ export const projects: Projects = {
     personal: [
         {
             name: 'Github auto pull',
-            description: 'Github auto pull is an open source project that can synchronize a GitHub repository in a local directory.',
+            description: 'project.ghpull.description',
             link: { href: 'https://github.com/Shawiizz/github-auto-pull', image: githubImage }
         },
         {
             name: 'ShaLibUpdate',
-            description: 'An open source project that enables automation of file downloads from a server with a file checker.',
+            description: 'project.autodl.description',
             link: { href: 'https://github.com/Shawiizz/ShaLibUpdate', image: githubImage }
         },
         {
             name: 'Minecraft Assets Downloader',
-            description: 'An open source project that enables developers to download Minecraft assets.',
+            description: 'project.assetsdl.description',
             link: { href: 'https://github.com/Shawiizz/MinecraftAssetsDownloader', image: githubImage }
         },
         {
             name: 'LLA Menu Story',
-            description: 'A tiny high school project that uploads an Instagram story of the self-menu of the week.',
+            description: 'project.lla.description',
             link: { href: 'https://github.com/Shawiizz/lla-menu-story', image: githubImage }
         },
         {
             name: 'PufferPanel API Wrapper',
-            description: 'Open source api wrapper to communicate with your self-hosted PufferPanel installation.',
+            description: 'project.pufferpanel.description',
             link: { href: 'https://github.com/Shawiizz/pufferpanel-api-wrapper', image: githubImage }
         },
         {
             name: 'Tomuss API',
-            description: 'Another open source api wrapper to communicate with Tomuss (Lyon 1) to get your grades.',
+            description: 'project.tomuss.description',
             link: { href: 'https://github.com/Shawiizz/tomuss-api', image: githubImage }
         },
         {
             name: "MohistMC's website",
-            description: "New MohistMC's website made with Next.js. https://new.mohistmc.com",
+            description: "project.mohistweb.description",
             link: { href: 'https://github.com/MohistMC/website', image: githubImage }
         }
     ],
     team: [
         {
             name: 'Mohist',
-            description: 'Mohist is an open source Minecraft server software supporting Forge mods and Bukkit/Spigot plugins in the same server.',
+            description: 'project.mohist.description',
             link: { href: 'https://github.com/MohistMC/Mohist', image: githubImage }
         },
         {
             name: 'Pluméo',
-            description: 'Pluméo is a social network project, which is private for now. I am working on it with my friend, Vrock691.',
+            description: 'project.plumeo.description',
             link: { href: 'https://vrock691.web.app', image: plumeoImage }
         }
     ]

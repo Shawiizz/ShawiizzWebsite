@@ -1,5 +1,3 @@
-import {LocaleState} from "@/features/i18n/TranslatorSlice";
-
 /**
  * Returns an array of strings that are between % signs with the original ones.
  * Example: "Hello %name%" will return ["Hello ", "name"]
