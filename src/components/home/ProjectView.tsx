@@ -20,7 +20,7 @@ export default function ProjectView({ projects, title, backgroundGradient }: Pro
         <div
             className={`${backgroundGradient ?? 'personalGradient'} md:w-[40%] w-[90%] h-full rounded-2xl drop-shadow-2xl flex flex-col items-center`}>
             <h2 className={`text-white text-center mt-8 tracking-[.213em] uppercase text-3xl font-bold`}>{title}</h2>
-            <div className={`flex justify-around w-full pt-12 flex-wrap`}>
+            <div className={`flex flex-col justify-center items-center w-full pt-12 flex-wrap md:flex-row md:justify-around`}>
                 {
                     projects.map((project, index) => {
                         if(index >= personalPage * 4 || index < (personalPage - 1) * 4) return null

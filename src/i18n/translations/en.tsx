@@ -1,10 +1,8 @@
 import { PartialLocaleState } from '@/features/i18n/TranslatorSlice'
-import EnglishFlag from '@/components/flags/EnglishFlag'
 
 const enTranslation: PartialLocaleState = {
     name: "English (US)",
     initials: "en",
-    flag: EnglishFlag,
     strings: {
         "home.subtitle": "PORTFOLIO",
         "home.section.1.title": "Who am I?",
@@ -15,7 +13,7 @@ const enTranslation: PartialLocaleState = {
         "home.section.contact.text": "You can talk to me using:",
         "home.section.contact.discord": "Discord:",
         "home.section.contact.mail": "Mail:",
-        "home.section.contact.github": "I also have a %GitHub% profile.",
+        "home.section.contact.github": "I also have a %GitHub% profile",
         "footer.description": "Portfolio website",
         "projects.solo": "Solo projects",
         "projects.team": "Team projects",

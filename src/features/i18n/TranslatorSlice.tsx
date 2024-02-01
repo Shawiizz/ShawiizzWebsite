@@ -12,7 +12,6 @@ export type PartialLocaleState = Omit<LocaleState, 'strings'> & {
 export interface LocaleState {
     name: string;
     initials: string;
-    flag?: React.FC;
     strings: Record<StringKey, string>;
 }
 

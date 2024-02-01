@@ -37,30 +37,30 @@ export default function Home() {
                     <div
                         className={`box-border h-[5vw] w-[5vw] rotate-45 transition-[border-width] duration ease-[ease-in-out] absolute animate-[fadeIn_5s] border-solid border-black bottom-[10%] border-r-2 border-b-2 hover:border-r-4 hover:border-b-4 dark:border-white`}></div>
                 </section>
-                <section className={`flex justify-evenly items-center md:w-full w-[80%] pt-20 pb-20`}>
+                <section className={`flex justify-evenly items-center md:w-full w-[80%] md:pt-20 pb-20`}>
                     <div className={`text-center`}>
-                        <h2 className={`text-[4.5em] ${passionOne.className} myselfGradient font-semibold`}>{strings['home.section.1.title']}</h2>
-                        <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.7rem] leading-[1.2em]`}>{getLocaleStringAsArgs(strings['home.section.1.text'])[0]}{new Date().getFullYear() - 2004}{getLocaleStringAsArgs(strings['home.section.1.text'])[2]}</p>
+                        <h2 className={`text-[4em] md:text-[4.5em] ${passionOne.className} myselfGradient font-semibold`}>{strings['home.section.1.title']}</h2>
+                        <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.5rem] md:text-[1.7rem] leading-[1.2em]`}>{getLocaleStringAsArgs(strings['home.section.1.text'])[0]}{new Date().getFullYear() - 2004}{getLocaleStringAsArgs(strings['home.section.1.text'])[2]}</p>
                     </div>
                     <Image src={pcImage} alt={'Computer science'}
                            className={`hidden md:block w-[30vw] h-auto shadow mr-12`} />
                 </section>
-                <section className={`flex flex-row-reverse justify-evenly items-center md:w-full w-[80%] pt-20 pb-20`}>
+                <section className={`flex flex-row-reverse justify-evenly items-center md:w-full w-[80%] md:pt-20 md:pb-20`}>
                     <div className={`text-center`}>
-                        <h2 className={`text-[4.5em] ${passionOne.className} parcoursGradient font-semibold`}>{strings['home.section.2.title']}</h2>
-                        <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.7rem] leading-[1.2em]`}>{strings['home.section.2.text']}</p>
+                        <h2 className={`text-[4em] md:text-[4.5em] ${passionOne.className} parcoursGradient font-semibold`}>{strings['home.section.2.title']}</h2>
+                        <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.5rem] md:text-[1.7rem] leading-[1.2em]`}>{strings['home.section.2.text']}</p>
                     </div>
                     <Image src={schoolImage} alt={'School'} className={`hidden md:block w-[25vw] h-auto shadow`} />
                 </section>
                 <section
-                    className={`pt-20 pb-20 flex flex-col md:flex-row justify-center items-stretch md:justify-around gap-12`}>
+                    className={`pt-20 pb-20 flex flex-col md:flex-row justify-center items-center md:items-stretch md:justify-around gap-12`}>
                     <ProjectView projects={projects.personal} title={strings['projects.solo']} />
                     <ProjectView projects={projects.team} title={strings['projects.team']} backgroundGradient={'teamGradient'} />
                 </section>
-                <section className={`flex justify-evenly items-center md:w-full w-[80%] pt-20 pb-20`}>
+                <section className={`flex justify-evenly items-center md:w-full w-[80%] md:pt-20 pb-20`}>
                     <div className={`flex flex-col justify-center items-center`}>
-                        <h2 className={`text-[4.5em] ${passionOne.className} skillsGradient font-semibold`}>{strings['home.competences.title']}</h2>
-                        <p className={`pt-5 tracking-[.054em] text-white font-semibold text-[1.5rem] leading-[1.2em] text-center max-w-screen-md`}>G{strings['home.competences.text']}</p>
+                        <h2 className={`text-[4em] md:text-[4.5em] ${passionOne.className} skillsGradient font-semibold`}>{strings['home.competences.title']}</h2>
+                        <p className={`pt-5 tracking-[.054em] text-white font-semibold text-[1.3rem] md:text-[1.5rem] leading-[1.2em] text-center max-w-screen-md`}>{strings['home.competences.text']}</p>
                         <div className={`flex flex-row flex-wrap gap-10 justify-center mt-20 ml-5 mr-5`}>
                             <SkillAccordion />
                         </div>

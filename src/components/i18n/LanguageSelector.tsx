@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { LocaleState, selectTranslations, setLocale } from '@/features/i18n/TranslatorSlice'
-import { getLocales, locales } from '@/i18n/Language'
+import { getFlag, getLocales, locales } from '@/i18n/Language'
 import { Dropdown } from 'flowbite-react'
 import { useAppSelector } from '@/util/redux/Hooks'
 
@@ -30,7 +30,7 @@ const LanguageSelector = () => {
         <Dropdown label={strings['button.language']} color={'blue'}>
             {getLocales().available.map((locale, index) => {
                 return (
-                    <Dropdown.Item key={index} icon={locale.flag}
+                    <Dropdown.Item key={index} icon={getFlag(locale)}
                                    className={`${locales.current.name === locale.name ? 'bg-blue-600' : ''}`}
                                    onClick={() => handleLanguageChange(locale)}>{locale.name}</Dropdown.Item>
                 )

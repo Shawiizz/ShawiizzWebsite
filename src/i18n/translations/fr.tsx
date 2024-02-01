@@ -1,9 +1,6 @@
-import FrenchFlag from '@/components/flags/FrenchFlag'
-
 const frTranslation = {
     name: "Français",
     initials: "fr",
-    flag: FrenchFlag,
     strings: {
         "home.subtitle": "PORTFOLIO",
         "home.section.1.title": "Qui suis-je ?",
@@ -14,7 +11,7 @@ const frTranslation = {
         "home.section.contact.text": "Vous pouvez me contacter via :",
         "home.section.contact.discord": "Discord :",
         "home.section.contact.mail": "Mail :",
-        "home.section.contact.github": "J'ai aussi un profil %GitHub%.",
+        "home.section.contact.github": "J'ai aussi un profil %GitHub%",
         "footer.description": "Site web portfolio",
         "projects.solo": "Projets seul",
         "projects.team": "Projets en équipe",
