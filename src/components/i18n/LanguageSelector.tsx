@@ -31,7 +31,7 @@ const LanguageSelector = () => {
             {getLocales().available.map((locale, index) => {
                 return (
                     <Dropdown.Item key={index} icon={getFlag(locale)}
-                                   className={`${locales.current.name === locale.name ? 'bg-blue-600' : ''}`}
+                                   className={`${locales.current.name === locale.name ? 'text-blue-600' : ''}`}
                                    onClick={() => handleLanguageChange(locale)}>{locale.name}</Dropdown.Item>
                 )
             })}
