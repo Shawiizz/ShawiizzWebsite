@@ -22,7 +22,7 @@ export const flowbiteTheme: CustomFlowbiteTheme = {
             },
             'selector': {
                 'base': 'w-12 border border-gray-300 bg-transparent py-2 leading-tight text-white hover:bg-cyan-100 hover:text-cyan-700',
-                'active': 'bg-transparent text-white',
+                'active': 'bg-gray-200 text-blue-600',
                 'disabled': 'opacity-50 cursor-normal'
             }
         }
