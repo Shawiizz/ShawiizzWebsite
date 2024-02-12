@@ -5,8 +5,6 @@ import React, { useState } from 'react'
 import { useAppSelector } from '@/util/redux/Hooks'
 import { selectTranslations } from '@/features/i18n/TranslatorSlice'
 import { flowbiteTheme } from '@/util/FlowbiteTheme'
-import { useSelector } from 'react-redux'
-import { selectTheme } from '@/features/theme/ThemeSlice'
 
 export interface ProjectViewProps {
     projects: Project[]
@@ -15,8 +13,6 @@ export interface ProjectViewProps {
 }
 
 export default function ProjectView({ projects, title, backgroundGradient }: ProjectViewProps) {
-    const mode = useSelector(selectTheme)
-
     const strings = useAppSelector(selectTranslations)
     const [personalPage, setPersonalPage] = useState(1)
 
@@ -25,7 +21,7 @@ export default function ProjectView({ projects, title, backgroundGradient }: Pro
     }
 
     return (
-        <Flowbite theme={{ theme: { pagination: flowbiteTheme.pagination }, mode }}>
+        <Flowbite theme={{ theme: { pagination: flowbiteTheme.pagination } }}>
             <div
                 className={`${backgroundGradient ?? 'personalGradient'} md:w-[40%] w-[90%] h-full rounded-2xl drop-shadow-2xl flex flex-col items-center`}>
                 <h2 className={`text-white text-center mt-8 tracking-[.213em] uppercase text-3xl font-bold`}>{title}</h2>
@@ -46,6 +42,7 @@ export default function ProjectView({ projects, title, backgroundGradient }: Pro
                                 onPageChange={personalPageChange}
                                 previousLabel={strings['pagination.previous']}
                                 nextLabel={strings['pagination.next']}
+                                theme={flowbiteTheme.pagination}
                                 showIcons />
                 </div>
             </div>

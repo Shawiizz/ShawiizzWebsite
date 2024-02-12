@@ -5,14 +5,10 @@ import React from 'react'
 import { skills } from '@/util/data/Skills'
 import { Random } from '@/util/Random'
 import { flowbiteTheme } from '@/util/FlowbiteTheme'
-import { useSelector } from 'react-redux'
-import { selectTheme } from '@/features/theme/ThemeSlice'
 
 export default function SkillAccordion() {
-    const mode = useSelector(selectTheme)
-
     return (
-        <Flowbite theme={{ theme: { accordion: flowbiteTheme.accordion }, mode }}>
+        <Flowbite theme={{ theme: { accordion: flowbiteTheme.accordion } }}>
             <Accordion key={Random.string(12)}>
                 {
                     skills.map((skill, index) => <Accordion.Panel key={index}>
