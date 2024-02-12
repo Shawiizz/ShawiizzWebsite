@@ -13,11 +13,11 @@ export const flowbiteTheme: CustomFlowbiteTheme = {
             "base": "xs:mt-0 mt-2 inline-flex items-center -space-x-px",
             "showIcon": "inline-flex",
             "previous": {
-                "base": "ml-0 rounded-l-lg border border-white bg-transparent py-2 px-3 leading-tight text-white",
+                "base": "prevButton ml-0 rounded-l-lg border border-white bg-transparent py-2 px-3 leading-tight text-white",
                 "icon": "h-5 w-5"
             },
             "next": {
-                "base": "rounded-r-lg border border-white bg-transparent py-2 px-3 leading-tight text-white",
+                "base": "nextButton rounded-r-lg border border-white bg-transparent py-2 px-3 leading-tight text-white",
                 "icon": "h-5 w-5"
             },
             "selector": {

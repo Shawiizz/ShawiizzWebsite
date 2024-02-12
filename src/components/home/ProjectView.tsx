@@ -2,6 +2,8 @@ import { Project, projects } from '@/util/data/Projects'
 import { ProjectCard } from '@/components/home/ProjectCard'
 import { Pagination } from 'flowbite-react'
 import React, { useState } from 'react'
+import { useAppSelector } from '@/util/redux/Hooks'
+import { selectTranslations } from '@/features/i18n/TranslatorSlice'
 
 export interface ProjectViewProps {
     projects: Project[]
@@ -10,6 +12,7 @@ export interface ProjectViewProps {
 }
 
 export default function ProjectView({ projects, title, backgroundGradient }: ProjectViewProps) {
+    const strings = useAppSelector(selectTranslations)
     const [personalPage, setPersonalPage] = useState(1)
 
     const personalPageChange = (pageNumber: number) => {
@@ -34,6 +37,8 @@ export default function ProjectView({ projects, title, backgroundGradient }: Pro
             <div className={`mb-6 ${projects.length < 5 && 'hidden'}`}>
                 <Pagination currentPage={personalPage} totalPages={Math.ceil(projects.length / 4)}
                             onPageChange={personalPageChange}
+                            previousLabel={strings['pagination.previous']}
+                            nextLabel={strings['pagination.next']}
                             showIcons />
             </div>
         </div>

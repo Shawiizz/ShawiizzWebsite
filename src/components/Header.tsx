@@ -33,6 +33,7 @@ const Header = () => {
                     <Navbar.Link href='#myself'>{strings['header.about']}</Navbar.Link>
                     <Navbar.Link href='#studies'>{strings['header.studies']}</Navbar.Link>
                     <Navbar.Link href='#projects'>{strings['header.projects']}</Navbar.Link>
+                    <Navbar.Link href='#technologies'>{strings['header.technologies']}</Navbar.Link>
                     <Navbar.Link href='#skills'>{strings['header.skills']}</Navbar.Link>
                     <Navbar.Link href='#contact'>{strings['header.contact']}</Navbar.Link>
                 </Navbar.Collapse>

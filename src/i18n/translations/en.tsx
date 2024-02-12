@@ -39,10 +39,11 @@ const enTranslation: PartialLocaleState = {
         'header.projects': 'Projects',
         'header.skills': 'Skills',
         'header.contact': 'Contact',
+        'header.technologies': 'Technologies',
         'tech.level.beginner': 'Beginner',
         'tech.level.intermediate': 'Intermediate',
         'tech.level.advanced': 'Advanced',
-        'home.level': 'Level',
+        'home.level': 'Level: ',
         'tech.type.language': 'Language',
         'tech.type.framework': 'Framework',
         'tech.type.database': 'Database',
@@ -50,6 +51,8 @@ const enTranslation: PartialLocaleState = {
         'tech.type.software': 'Software',
         'home.section.tech.title': 'Technologies',
         'home.section.tech.text': 'Here are the technologies I use everyday and my level in each of them. You can click on the tabs to see the technologies of each type.',
+        'pagination.previous': 'Previous',
+        'pagination.next': 'Next'
     }
 }
 

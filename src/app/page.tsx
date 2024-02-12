@@ -63,9 +63,9 @@ export default function Home() {
                     <ProjectView projects={projects.team} title={strings['projects.team']}
                                  backgroundGradient={'teamGradient'} />
                 </section>
-                <section className={`flex justify-evenly items-center md:w-full w-[80%] md:pt-20 pb-20`} id={`skills`}>
+                <section className={`flex justify-evenly items-center md:w-full w-[80%] md:pt-20 pb-20`} id={`technologies`}>
                     <div className={`flex flex-col justify-center items-center`}>
-                        <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} skillsGradient font-semibold`}>{strings['home.section.tech.title']}</h2>
+                        <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} techGradient font-semibold`}>{strings['home.section.tech.title']}</h2>
                         <p className={`pt-5 tracking-[.054em] text-gray-800 dark:text-white font-semibold text-[1.3rem] md:text-[1.5rem] leading-[1.2em] text-center max-w-screen-md`}>{strings['home.section.tech.text']}</p>
                         <div className={`flex flex-row flex-wrap gap-10 justify-center mt-20 ml-5 mr-5`}>
                             <Technologies />
