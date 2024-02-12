@@ -6,7 +6,7 @@ export interface SkillCardProps {
     skill: Skill
 }
 
-export default function SkillCard({skill }: SkillCardProps) {
+export default function SkillCard({ skill }: SkillCardProps) {
     const [isExpanded, setIsExpanded] = React.useState(false)
 
     const onArrowClick = () => {

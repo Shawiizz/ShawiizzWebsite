@@ -5,17 +5,14 @@ import Image from 'next/image'
 import pcImage from '../../public/pc.svg'
 import contactImage from '../../public/contact.png'
 import schoolImage from '../../public/school.png'
-import shawiizzIcon from '@/app/favicon.ico'
-import { ProjectCard } from '@/components/home/ProjectCard'
 import { projects } from '@/util/data/Projects'
 import Link from 'next/link'
-import { Flowbite, Pagination, Card, Accordion } from 'flowbite-react'
-import React, { useState } from 'react'
+import { Flowbite } from 'flowbite-react'
+import React from 'react'
 import { flowbiteTheme } from '@/util/FlowbiteTheme'
 import { useSelector } from 'react-redux'
 import { selectTheme } from '@/features/theme/ThemeSlice'
 import { skills } from '@/util/data/Skills'
-import SkillCard from '@/components/home/SkillCard'
 import ProjectView from '@/components/home/ProjectView'
 import SkillAccordion from '@/components/home/SkillAccordion'
 import AnimatedTitle from '@/components/home/AnimatedTitle'
@@ -63,7 +60,8 @@ export default function Home() {
                     <ProjectView projects={projects.team} title={strings['projects.team']}
                                  backgroundGradient={'teamGradient'} />
                 </section>
-                <section className={`flex justify-evenly items-center md:w-full w-[80%] md:pt-20 pb-20`} id={`technologies`}>
+                <section className={`flex justify-evenly items-center md:w-full w-[80%] md:pt-20 pb-20`}
+                         id={`technologies`}>
                     <div className={`flex flex-col justify-center items-center`}>
                         <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} techGradient font-semibold`}>{strings['home.section.tech.title']}</h2>
                         <p className={`pt-5 tracking-[.054em] text-gray-800 dark:text-white font-semibold text-[1.3rem] md:text-[1.5rem] leading-[1.2em] text-center max-w-screen-md`}>{strings['home.section.tech.text']}</p>

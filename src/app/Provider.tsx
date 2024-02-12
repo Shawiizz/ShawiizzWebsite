@@ -1,6 +1,6 @@
-"use client";
+'use client'
 
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react'
 import ReduxProvider from '@/app/ReduxProvider'
 
 export default function Providers({ children }: PropsWithChildren<any>) {
@@ -8,5 +8,5 @@ export default function Providers({ children }: PropsWithChildren<any>) {
         <ReduxProvider>
             {children}
         </ReduxProvider>
-    );
+    )
 }

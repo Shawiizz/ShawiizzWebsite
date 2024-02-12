@@ -1,4 +1,4 @@
-import { Project, projects } from '@/util/data/Projects'
+import { Project } from '@/util/data/Projects'
 import { ProjectCard } from '@/components/home/ProjectCard'
 import { Pagination } from 'flowbite-react'
 import React, { useState } from 'react'
@@ -23,10 +23,11 @@ export default function ProjectView({ projects, title, backgroundGradient }: Pro
         <div
             className={`${backgroundGradient ?? 'personalGradient'} md:w-[40%] w-[90%] h-full rounded-2xl drop-shadow-2xl flex flex-col items-center`}>
             <h2 className={`text-white text-center mt-8 tracking-[.213em] uppercase text-3xl font-bold`}>{title}</h2>
-            <div className={`flex flex-col justify-center items-center w-full pt-12 flex-wrap md:flex-row md:justify-around`}>
+            <div
+                className={`flex flex-col justify-center items-center w-full pt-12 flex-wrap md:flex-row md:justify-around`}>
                 {
                     projects.map((project, index) => {
-                        if(index >= personalPage * 4 || index < (personalPage - 1) * 4) return null
+                        if (index >= personalPage * 4 || index < (personalPage - 1) * 4) return null
 
                         return (
                             <ProjectCard key={index} {...project} />

@@ -9,7 +9,7 @@ const configStore = () =>
     configureStore({
         reducer: {
             translator: translatorSlice.reducer,
-            theme: themeSlice.reducer,
+            theme: themeSlice.reducer
         }
     })
 

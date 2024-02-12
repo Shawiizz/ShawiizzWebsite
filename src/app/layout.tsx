@@ -7,7 +7,7 @@ import Providers from '@/app/Provider'
 
 export const metadata: Metadata = {
     title: 'Shawiiz_z\'s Portfolio',
-    description: 'Welcome to my portfolio',
+    description: 'Welcome to my portfolio'
 }
 
 export default function RootLayout({

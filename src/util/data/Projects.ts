@@ -46,8 +46,8 @@ export const projects: Projects = {
             link: { href: 'https://github.com/Shawiizz/tomuss-api', image: githubImage }
         },
         {
-            name: "MohistMC's website",
-            description: "project.mohistweb.description",
+            name: 'MohistMC\'s website',
+            description: 'project.mohistweb.description',
             link: { href: 'https://github.com/MohistMC/website', image: githubImage }
         }
     ],

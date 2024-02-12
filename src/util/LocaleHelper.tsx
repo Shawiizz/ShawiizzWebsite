@@ -5,5 +5,5 @@
  * @param str The string to parse
  */
 export function getLocaleStringAsArgs(str: string): string[] {
-    return str ? str.split(/%([^%]+)%/).filter(Boolean) : [];
+    return str ? str.split(/%([^%]+)%/).filter(Boolean) : []
 }

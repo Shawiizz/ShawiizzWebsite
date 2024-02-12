@@ -1,7 +1,7 @@
 import { passionOne } from '@/app/fonts'
 import React, { useEffect } from 'react'
 import { useAppSelector } from '@/util/redux/Hooks'
-import { selectTranslations, StringKey } from '@/features/i18n/TranslatorSlice'
+import { selectTranslations } from '@/features/i18n/TranslatorSlice'
 import { getCurrentLocale } from '@/i18n/Language'
 
 export default function AnimatedTitle() {
@@ -22,12 +22,12 @@ export default function AnimatedTitle() {
         }
 
         async function executeTextAnimations() {
-            await textAnimation("Shawiiz_z");
-            await textAnimation(getCurrentLocale().strings['home.title.animation.1'], 500, 100, 50);
-            await textAnimation(getCurrentLocale().strings['home.title.animation.2'], 200, 100, 50);
-            await textAnimation(getCurrentLocale().strings['home.title.animation.3'], 200, 100, 50);
-            await textAnimation(getCurrentLocale().strings['home.title.animation.4'], 500, 100, 50);
-            await textAnimation(":)", 200, 100, 100);
+            await textAnimation('Shawiiz_z')
+            await textAnimation(getCurrentLocale().strings['home.title.animation.1'], 500, 100, 50)
+            await textAnimation(getCurrentLocale().strings['home.title.animation.2'], 200, 100, 50)
+            await textAnimation(getCurrentLocale().strings['home.title.animation.3'], 200, 100, 50)
+            await textAnimation(getCurrentLocale().strings['home.title.animation.4'], 500, 100, 50)
+            await textAnimation(':)', 200, 100, 100)
 
             await executeTextAnimations()
         }

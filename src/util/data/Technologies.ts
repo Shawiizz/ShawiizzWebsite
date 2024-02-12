@@ -90,7 +90,7 @@ export const TECHNOLOGIES_TYPES: Record<string, TechnologyType> = {
     software: {
         displayName: 'tech.type.software',
         icon: HiDesktopComputer
-    },
+    }
 }
 
 export type TechnologyDisplayName = 'tech.level.beginner' | 'tech.level.intermediate' | 'tech.level.advanced';
@@ -129,7 +129,7 @@ export interface Technology {
 
 export const technologies: Technology[] = [
     {
-        displayName: "Android Studio",
+        displayName: 'Android Studio',
         icon: {
             dark: androidstudiodark,
             white: androidstudiowhite
@@ -442,5 +442,5 @@ export const technologies: Technology[] = [
         },
         type: ['framework'],
         level: 'beginner'
-    },
+    }
 ]

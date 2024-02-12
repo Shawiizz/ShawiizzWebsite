@@ -35,13 +35,14 @@ const Technologies = () => {
                                         <div key={index}
                                              className='flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700'>
                                             <div className='flex items-center space-x-4'>
-                                                <Image src={mode === 'dark' ? tech.icon.dark : tech.icon.white} alt={tech.displayName}
+                                                <Image src={mode === 'dark' ? tech.icon.dark : tech.icon.white}
+                                                       alt={tech.displayName}
                                                        width={48} height={48} className='w-12 h-12' />
                                                 <h2 className='text-lg font-semibold text-gray-800 dark:text-gray-200'>{tech.displayName}</h2>
                                             </div>
                                             <div className='flex items-center space-x-4'>
                                                 <p className='text-sm text-gray-500 dark:text-gray-400'>{strings['home.level']}
-                                                      {strings[technologyLevels[tech.level].displayName]}</p>
+                                                    {strings[technologyLevels[tech.level].displayName]}</p>
                                             </div>
                                         </div>
                                     )
