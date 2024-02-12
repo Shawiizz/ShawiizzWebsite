@@ -1,6 +1,4 @@
 import { Pagination, Tabs } from 'flowbite-react'
-import { HiAdjustments, HiClipboardList, HiUserCircle } from 'react-icons/hi'
-import { MdDashboard } from 'react-icons/md'
 import { useAppSelector } from '@/util/redux/Hooks'
 import { selectTranslations } from '@/features/i18n/TranslatorSlice'
 import { technologies, TECHNOLOGIES_TYPES, technologyLevels, TechnologyTypeKeys } from '@/util/data/Technologies'
