@@ -41,7 +41,7 @@ const Technologies = () => {
                                                 <h2 className='text-lg font-semibold text-gray-800 dark:text-gray-200'>{tech.displayName}</h2>
                                             </div>
                                             <div className='flex items-center space-x-4'>
-                                                <p className='text-sm text-gray-500 dark:text-gray-400'>{strings['home.level']}
+                                                <p className='text-sm text-gray-500 dark:text-gray-400 text-right'>{strings['home.level']}
                                                     {strings[technologyLevels[tech.level].displayName]}</p>
                                             </div>
                                         </div>

@@ -39,7 +39,7 @@ export default function Home() {
                 <section className={`flex justify-evenly items-center md:w-full w-[80%] md:pt-20 pb-20`} id={`myself`}>
                     <div className={`text-center`}>
                         <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} text-gradient bg-[linear-gradient(45deg,#ffd233_0%,#ff2bbf_100%)] dark:bg-[linear-gradient(45deg,#FBDA61_0%,#FF5ACD_100%)] font-semibold`}>{strings['home.section.1.title']}</h2>
-                        <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.5rem] md:text-[1.7rem] leading-[1.2em]`}>{getLocaleStringAsArgs(strings['home.section.1.text'])[0]}{new Date().getFullYear() - 2004}{getLocaleStringAsArgs(strings['home.section.1.text'])[2]}</p>
+                        <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.5rem] md:text-[1.7rem] leading-[1.2em] md:ml-[5rem] md:mr-[5rem]`}>{getLocaleStringAsArgs(strings['home.section.1.text'])[0]}{new Date().getFullYear() - 2004}{getLocaleStringAsArgs(strings['home.section.1.text'])[2]}</p>
                     </div>
                     <Image src={pcImage} alt={'Computer science'}
                            className={`hidden md:block w-[30vw] h-auto mr-12`} />
@@ -49,9 +49,9 @@ export default function Home() {
                     id={`studies`}>
                     <div className={`text-center`}>
                         <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} text-gradient bg-[linear-gradient(180deg,#377cef_0%,#fa4bc8_100%)] dark:bg-[linear-gradient(180deg,#A9C9FF_0%,#FFBBEC_100%)] font-semibold`}>{strings['home.section.2.title']}</h2>
-                        <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.5rem] md:text-[1.7rem] leading-[1.2em]`}>{strings['home.section.2.text']}</p>
+                        <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.5rem] md:text-[1.7rem] leading-[1.2em] md:ml-[5rem] md:mr-[5rem]`}>{strings['home.section.2.text']}</p>
                     </div>
-                    <Image src={schoolImage} alt={'School'} className={`hidden md:block w-[25vw] h-auto`} />
+                    <Image src={schoolImage} alt={'School'} className={`hidden md:block w-[25vw] h-auto ml-10`} />
                 </section>
                 <section
                     className={`pt-20 pb-20 flex flex-col md:flex-row justify-center items-center md:items-stretch md:justify-around gap-12`}
@@ -60,11 +60,11 @@ export default function Home() {
                     <ProjectView projects={projects.team} title={strings['projects.team']}
                                  backgroundGradient={'teamGradient'} />
                 </section>
-                <section className={`flex justify-evenly items-center md:w-full w-[80%] md:pt-20 pb-20`}
+                <section className={`flex justify-evenly items-center md:w-full w-[90%] md:pt-20 pb-20`}
                          id={`technologies`}>
                     <div className={`flex flex-col justify-center items-center`}>
                         <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} techGradient font-semibold`}>{strings['home.section.tech.title']}</h2>
-                        <p className={`pt-5 tracking-[.054em] text-gray-800 dark:text-white font-semibold text-[1.3rem] md:text-[1.5rem] leading-[1.2em] text-center max-w-screen-md`}>{strings['home.section.tech.text']}</p>
+                        <p className={`ml-6 mr-6 md:ml-0 md:mr-0 pt-5 tracking-[.054em] text-gray-800 dark:text-white font-semibold text-[1.3rem] md:text-[1.5rem] leading-[1.2em] text-center max-w-screen-md`}>{strings['home.section.tech.text']}</p>
                         <div className={`flex flex-row flex-wrap gap-10 justify-center mt-20 ml-5 mr-5`}>
                             <Technologies />
                         </div>
