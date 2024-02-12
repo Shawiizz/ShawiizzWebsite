@@ -37,6 +37,17 @@ const frTranslation = {
         "header.projects": "Projets",
         "header.skills": "Compétences",
         "header.contact": "Contact",
+        "tech.level.beginner": "Débutant",
+        "tech.level.intermediate": "Intermédiaire",
+        "tech.level.advanced": "Avancé",
+        "home.level": "Niveau",
+        "tech.type.language": "Langage",
+        "tech.type.framework": "Framework",
+        "tech.type.database": "Base de données",
+        "tech.type.tool": "Outil",
+        "tech.type.software": "Logiciel",
+        "home.section.tech.title": "Technologies",
+        "home.section.tech.text": "Voici les technologies que j'utilise au quotidien ainsi que mon niveau dans chacune d'elles. Vous pouvez cliquer sur les onglets pour voir les technologies de chaque type.",
     }
 }
 

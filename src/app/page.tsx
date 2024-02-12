@@ -23,6 +23,7 @@ import Footer from '@/components/Footer'
 import { useAppSelector } from '@/util/redux/Hooks'
 import { selectTranslations } from '@/features/i18n/TranslatorSlice'
 import { getLocaleStringAsArgs } from '@/util/LocaleHelper'
+import Technologies from '@/components/home/Technologies'
 
 export default function Home() {
     const mode = useSelector(selectTheme)
@@ -34,7 +35,8 @@ export default function Home() {
                 <section className='flex flex-col justify-center items-center h-screen mb-20'>
                     <AnimatedTitle />
                     <h2 className={`text-center text-gray-600 dark:text-white md:text-4xl text-3xl font-normal tracking-[.561em] mt-7`}>{strings['home.subtitle']}</h2>
-                    <Link href={`#myself`} className={`box-border h-[5vw] w-[5vw] rotate-45 transition-[border-width] duration ease-[ease-in-out] absolute animate-[fadeIn_5s] border-solid border-black bottom-[10%] border-r-2 border-b-2 hover:border-r-4 hover:border-b-4 dark:border-white`}>
+                    <Link href={`#myself`}
+                          className={`box-border h-[5vw] w-[5vw] rotate-45 transition-[border-width] duration ease-[ease-in-out] absolute animate-[fadeIn_5s] border-solid border-black bottom-[10%] border-r-2 border-b-2 hover:border-r-4 hover:border-b-4 dark:border-white`}>
                     </Link>
                 </section>
                 <section className={`flex justify-evenly items-center md:w-full w-[80%] md:pt-20 pb-20`} id={`myself`}>
@@ -46,7 +48,8 @@ export default function Home() {
                            className={`hidden md:block w-[30vw] h-auto mr-12`} />
                 </section>
                 <section
-                    className={`flex flex-row-reverse justify-evenly items-center md:w-full w-[80%] md:pt-20 md:pb-20`} id={`studies`}>
+                    className={`flex flex-row-reverse justify-evenly items-center md:w-full w-[80%] md:pt-20 md:pb-20`}
+                    id={`studies`}>
                     <div className={`text-center`}>
                         <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} text-gradient bg-[linear-gradient(180deg,#377cef_0%,#fa4bc8_100%)] dark:bg-[linear-gradient(180deg,#A9C9FF_0%,#FFBBEC_100%)] font-semibold`}>{strings['home.section.2.title']}</h2>
                         <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-semibold text-[1.5rem] md:text-[1.7rem] leading-[1.2em]`}>{strings['home.section.2.text']}</p>
@@ -54,10 +57,20 @@ export default function Home() {
                     <Image src={schoolImage} alt={'School'} className={`hidden md:block w-[25vw] h-auto`} />
                 </section>
                 <section
-                    className={`pt-20 pb-20 flex flex-col md:flex-row justify-center items-center md:items-stretch md:justify-around gap-12`} id={`projects`}>
+                    className={`pt-20 pb-20 flex flex-col md:flex-row justify-center items-center md:items-stretch md:justify-around gap-12`}
+                    id={`projects`}>
                     <ProjectView projects={projects.personal} title={strings['projects.solo']} />
                     <ProjectView projects={projects.team} title={strings['projects.team']}
                                  backgroundGradient={'teamGradient'} />
+                </section>
+                <section className={`flex justify-evenly items-center md:w-full w-[80%] md:pt-20 pb-20`} id={`skills`}>
+                    <div className={`flex flex-col justify-center items-center`}>
+                        <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} skillsGradient font-semibold`}>{strings['home.section.tech.title']}</h2>
+                        <p className={`pt-5 tracking-[.054em] text-gray-800 dark:text-white font-semibold text-[1.3rem] md:text-[1.5rem] leading-[1.2em] text-center max-w-screen-md`}>{strings['home.section.tech.text']}</p>
+                        <div className={`flex flex-row flex-wrap gap-10 justify-center mt-20 ml-5 mr-5`}>
+                            <Technologies />
+                        </div>
+                    </div>
                 </section>
                 <section className={`flex justify-evenly items-center md:w-full w-[80%] md:pt-20 pb-20`} id={`skills`}>
                     <div className={`flex flex-col justify-center items-center`}>
@@ -69,7 +82,8 @@ export default function Home() {
                     </div>
                 </section>
                 <section
-                    className={`flex text-center justify-around items-center ml-10 mr-10 md:pt-20 md:w-full w-80%`} id={`contact`}>
+                    className={`flex text-center justify-around items-center ml-10 mr-10 md:pt-20 md:w-full w-80%`}
+                    id={`contact`}>
                     <div className={`text-left dark:text-white`}>
                         <h2 className={`text-[4.5em] ${passionOne.className} contactGradient font-semibold mb-5`}>{strings['home.section.contact.title']}</h2>
                         <p className={`pb-5 text-2xl tracking-[.054em] font-bold`}>{strings['home.section.contact.text']}</p>
