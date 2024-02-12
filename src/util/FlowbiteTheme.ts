@@ -102,7 +102,7 @@ export const flowbiteTheme: CustomFlowbiteTheme = {
             'base': 'w-full md:block md:w-auto',
             'list': 'mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium',
             'hidden': {
-                'on': 'hidden',
+                'on': '',
                 'off': ''
             }
         },

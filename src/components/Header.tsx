@@ -8,9 +8,19 @@ import ThemeSwitcher from '@/components/ThemeSwitcher'
 import { useAppSelector } from '@/util/redux/Hooks'
 import { selectTranslations } from '@/features/i18n/TranslatorSlice'
 import LanguageSelector from '@/components/i18n/LanguageSelector'
+import { useState } from 'react'
 
 const Header = () => {
     const strings = useAppSelector(selectTranslations)
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false)
+
+    const toggleNavbar = () => {
+        setIsNavbarOpen(!isNavbarOpen)
+    }
+
+    const closeNavBar = () => {
+        setIsNavbarOpen(false)
+    }
 
     return (
         <Navbar fluid rounded theme={flowbiteTheme.navbar}>
@@ -18,21 +28,21 @@ const Header = () => {
             <div className='flex md:order-2'>
                 <LanguageSelector />
                 <ThemeSwitcher className={`ml-4`} />
-                <Navbar.Toggle />
+                <Navbar.Toggle onClick={toggleNavbar} />
             </div>
-            <Navbar.Collapse>
-                <Navbar.Link href='#' active>
+            <Navbar.Collapse hidden={!isNavbarOpen}>
+                <Navbar.Link href='#' active onClick={closeNavBar}>
                     {strings['header.home']}
                 </Navbar.Link>
-                <Navbar.Link href='#myself'>{strings['header.about']}</Navbar.Link>
-                <Navbar.Link href='#studies'>{strings['header.studies']}</Navbar.Link>
-                <Navbar.Link href='#projects'>{strings['header.projects']}</Navbar.Link>
-                <Navbar.Link href='#technologies'>{strings['header.technologies']}</Navbar.Link>
-                <Navbar.Link href='#skills'>{strings['header.skills']}</Navbar.Link>
-                <Navbar.Link href='#contact'>{strings['header.contact']}</Navbar.Link>
+                <Navbar.Link href='#myself' onClick={closeNavBar}>{strings['header.about']}</Navbar.Link>
+                <Navbar.Link href='#studies' onClick={closeNavBar}>{strings['header.studies']}</Navbar.Link>
+                <Navbar.Link href='#projects' onClick={closeNavBar}>{strings['header.projects']}</Navbar.Link>
+                <Navbar.Link href='#technologies' onClick={closeNavBar}>{strings['header.technologies']}</Navbar.Link>
+                <Navbar.Link href='#skills' onClick={closeNavBar}>{strings['header.skills']}</Navbar.Link>
+                <Navbar.Link href='#contact' onClick={closeNavBar}>{strings['header.contact']}</Navbar.Link>
             </Navbar.Collapse>
         </Navbar>
-    )
+    );
 }
 
 export default Header
