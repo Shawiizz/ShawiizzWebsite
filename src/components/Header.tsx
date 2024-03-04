@@ -42,7 +42,7 @@ const Header = () => {
                 <Navbar.Link href='#contact' onClick={closeNavBar}>{strings['header.contact']}</Navbar.Link>
             </Navbar.Collapse>
         </Navbar>
-    );
+    )
 }
 
 export default Header

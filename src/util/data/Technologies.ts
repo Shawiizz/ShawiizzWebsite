@@ -124,323 +124,361 @@ export interface Technology {
         white: StaticImport
     },
     type: TechnologyTypeKeys[],
-    level: keyof typeof technologyLevels
+    level: keyof typeof technologyLevels,
+    homepage: string
 }
 
-export const technologies: Technology[] = [
-    {
+const technologies = {
+    androidstudio: {
         displayName: 'Android Studio',
         icon: {
             dark: androidstudiodark,
             white: androidstudiowhite
         },
         type: ['software'],
-        level: 'beginner'
+        level: 'beginner',
+        homepage: 'https://developer.android.com/studio'
     },
-    {
+    arduino: {
         displayName: 'Arduino',
         icon: {
             dark: arduino,
             white: arduino
         },
         type: ['software', 'language'],
-        level: 'intermediate'
+        level: 'intermediate',
+        homepage: 'https://www.arduino.cc/'
     },
-    {
+    bash: {
         displayName: 'Bash',
         icon: {
             dark: bashdark,
             white: bashwhite
         },
         type: ['software'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://www.gnu.org/software/bash/'
     },
-    {
+    c: {
         displayName: 'C',
         icon: {
             dark: c,
             white: c
         },
         type: ['language'],
-        level: 'intermediate'
+        level: 'intermediate',
+        homepage: 'https://en.wikipedia.org/wiki/C_(programming_language)'
     },
-    {
+    cloudflare: {
         displayName: 'CloudFlare',
         icon: {
             dark: cloudflaredark,
             white: cloudflarewhite
         },
         type: ['tool'],
-        level: 'intermediate'
+        level: 'intermediate',
+        homepage: 'https://www.cloudflare.com/'
     },
-    {
+    css: {
         displayName: 'CSS',
         icon: {
             dark: css,
             white: css
         },
         type: ['language'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
     },
-    {
+    dart: {
         displayName: 'Dart',
         icon: {
             dark: dartdark,
             white: dartwhite
         },
         type: ['language'],
-        level: 'beginner'
+        level: 'beginner',
+        homepage: 'https://dart.dev/'
     },
-    {
+    electronjs: {
         displayName: 'ElectronJS',
         icon: {
             dark: electron,
             white: electron
         },
         type: ['framework'],
-        level: 'beginner'
+        level: 'beginner',
+        homepage: 'https://www.electronjs.org/'
     },
-    {
+    expressjs: {
         displayName: 'ExpressJS',
         icon: {
             dark: expressdark,
             white: expresswhite
         },
         type: ['framework'],
-        level: 'intermediate'
+        level: 'intermediate',
+        homepage: 'https://expressjs.com/'
     },
-    {
+    figma: {
         displayName: 'Figma',
         icon: {
             dark: figmadark,
             white: figmalight
         },
         type: ['tool'],
-        level: 'intermediate'
+        level: 'intermediate',
+        homepage: 'https://www.figma.com/'
     },
-    {
+    flutter: {
         displayName: 'Flutter',
         icon: {
             dark: flutterdark,
             white: flutterlight
         },
         type: ['language'],
-        level: 'beginner'
+        level: 'beginner',
+        homepage: 'https://flutter.dev/'
     },
-    {
+    git: {
         displayName: 'Git',
         icon: {
             dark: git,
             white: git
         },
         type: ['tool'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://git-scm.com/'
     },
-    {
+    github: {
         displayName: 'GitHub',
         icon: {
             dark: githubdark,
             white: githublight
         },
         type: ['tool'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://github.com'
     },
-    {
+    gradle: {
         displayName: 'Gradle',
         icon: {
             dark: gradledark,
             white: gradlelight
         },
         type: ['tool'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://gradle.org/'
     },
-    {
+    html: {
         displayName: 'HTML',
         icon: {
             dark: html,
             white: html
         },
         type: ['language'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
     },
-    {
+    idea: {
         displayName: 'IntelliJ IDEA',
         icon: {
             dark: ideadark,
             white: idealight
         },
         type: ['software'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://www.jetbrains.com/idea/'
     },
-    {
+    java: {
         displayName: 'Java',
         icon: {
             dark: javadark,
             white: javalight
         },
         type: ['language'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://www.java.com/'
     },
-    {
+    js: {
         displayName: 'JavaScript',
         icon: {
             dark: js,
             white: js
         },
         type: ['language'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
     },
-    {
+    linux: {
         displayName: 'Linux',
         icon: {
             dark: linuxdark,
             white: linuxlight
         },
         type: ['software', 'tool'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://www.linux.org/'
     },
-    {
+    md: {
         displayName: 'Markdown',
         icon: {
             dark: markdowndark,
             white: markdownlight
         },
         type: ['tool'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://www.markdownguide.org/'
     },
-    {
+    mongodb: {
         displayName: 'MongoDB',
         icon: {
             dark: mongodb,
             white: mongodb
         },
         type: ['database'],
-        level: 'beginner'
+        level: 'beginner',
+        homepage: 'https://www.mongodb.com/'
     },
-    {
+    mysql: {
         displayName: 'MySQL',
         icon: {
             dark: mysqldark,
             white: mysqllight
         },
         type: ['database'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://www.mysql.com/'
     },
-    {
+    next: {
         displayName: 'NextJS',
         icon: {
             dark: nextjsdark,
             white: nextjslight
         },
         type: ['framework'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://nextjs.org/'
     },
-    {
+    nginx: {
         displayName: 'Nginx',
         icon: {
             dark: nginx,
             white: nginx
         },
         type: ['software', 'tool'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://www.nginx.com/'
     },
-    {
+    node: {
         displayName: 'NodeJS',
         icon: {
             dark: nodejsdark,
             white: nodejslight
         },
         type: ['language'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://nodejs.org/'
     },
-    {
+    php: {
         displayName: 'PHP',
         icon: {
             dark: phpdark,
             white: phplight
         },
         type: ['language'],
-        level: 'intermediate'
+        level: 'intermediate',
+        homepage: 'https://www.php.net/'
     },
-    {
+    postgre: {
         displayName: 'PostgreSQL',
         icon: {
             dark: postgresdark,
             white: postgreslight
         },
         type: ['database'],
-        level: 'intermediate'
+        level: 'intermediate',
+        homepage: 'https://www.postgresql.org/'
     },
-    {
+    python: {
         displayName: 'Python',
         icon: {
             dark: pydark,
             white: pylight
         },
         type: ['language'],
-        level: 'intermediate'
+        level: 'intermediate',
+        homepage: 'https://www.python.org/'
     },
-    {
+    rpi: {
         displayName: 'Raspberry PI',
         icon: {
             dark: raspberrypidark,
             white: raspberrypilight
         },
         type: ['software', 'tool'],
-        level: 'intermediate'
+        level: 'intermediate',
+        homepage: 'https://www.raspberrypi.org/'
     },
-    {
+    react: {
         displayName: 'React',
         icon: {
             dark: reactdark,
             white: reactlight
         },
         type: ['framework'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://reactjs.org/'
     },
-    {
+    symfony: {
         displayName: 'Symfony',
         icon: {
             dark: symfonydark,
             white: symfonylight
         },
         type: ['framework'],
-        level: 'beginner'
+        level: 'beginner',
+        homepage: 'https://symfony.com/'
     },
-    {
+    tailwind: {
         displayName: 'TailwindCSS',
         icon: {
             dark: tailwinddark,
             white: tailwindlight
         },
         type: ['framework'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://tailwindcss.com/'
     },
-    {
+    ts: {
         displayName: 'TypeScript',
         icon: {
             dark: ts,
             white: ts
         },
         type: ['language'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://www.typescriptlang.org/'
     },
-    {
+    vscode: {
         displayName: 'Visual Studio Code',
         icon: {
             dark: vscodedark,
             white: vscodelight
         },
         type: ['software'],
-        level: 'advanced'
+        level: 'advanced',
+        homepage: 'https://code.visualstudio.com/'
     },
-    {
+    vue: {
         displayName: 'VueJS',
         icon: {
             dark: vuedark,
             white: vuelight
         },
         type: ['framework'],
-        level: 'beginner'
+        level: 'beginner',
+        homepage: 'https://vuejs.org/'
     }
-]
+}
+
+export const Technologies: Record<keyof typeof technologies, Technology> = technologies

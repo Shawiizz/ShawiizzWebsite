@@ -25,6 +25,7 @@ const frTranslation = {
         'project.tomuss.description': 'Un autre petit projet open source pour communiquer avec Tomuss (Lyon 1) et obtenir ses notes.',
         'project.mohistweb.description': 'Nouveau site web de MohistMC fait avec Next.js.',
         'button.language': 'Langue',
+        'button.sourcecode': 'Code source',
         'home.title.animation.1': 'Bienvenue',
         'home.title.animation.2': 'sur',
         'home.title.animation.3': 'mon',

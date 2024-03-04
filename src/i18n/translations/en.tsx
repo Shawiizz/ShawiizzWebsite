@@ -27,6 +27,7 @@ const enTranslation: PartialLocaleState = {
         'project.tomuss.description': 'Another open source api wrapper to communicate with Tomuss (Lyon 1) to get your grades.',
         'project.mohistweb.description': 'New MohistMC\'s website made with Next.js.',
         'button.language': 'Language',
+        'button.sourcecode': 'Source code',
         'home.title.animation.1': 'Welcome',
         'home.title.animation.2': 'to',
         'home.title.animation.3': 'my',

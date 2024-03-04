@@ -23,10 +23,10 @@ export default function ProjectView({ projects, title, backgroundGradient }: Pro
     return (
         <Flowbite theme={{ theme: { pagination: flowbiteTheme.pagination } }}>
             <div
-                className={`${backgroundGradient ?? 'personalGradient'} md:w-[40%] w-[90%] h-full rounded-2xl drop-shadow-2xl flex flex-col items-center`}>
-                <h2 className={`text-white text-center mt-8 tracking-[.213em] uppercase text-3xl font-bold`}>{title}</h2>
+                className={`border dark:border-none border-gray-300 dark:bg-gray-800 md:w-[45%] w-[90%] h-full rounded-2xl dark:drop-shadow-2xl flex flex-col items-center pb-6`}>
+                <h2 className={`text-gray-800 dark:text-white text-center mt-8 tracking-[.213em] uppercase text-3xl font-bold`}>{title}</h2>
                 <div
-                    className={`flex flex-col justify-center items-center w-full pt-12 flex-wrap md:flex-row md:justify-around`}>
+                    className={`flex flex-col w-full flex-wrap md:flex-row md:gap-8 md:items-stretch mt-8 justify-center`}>
                     {
                         projects.map((project, index) => {
                             if (index >= personalPage * 4 || index < (personalPage - 1) * 4) return null
@@ -37,7 +37,7 @@ export default function ProjectView({ projects, title, backgroundGradient }: Pro
                         })
                     }
                 </div>
-                <div className={`mb-6 ${projects.length < 5 && 'hidden'}`}>
+                <div className={`mb-2 mt-6 ${projects.length < 5 && 'hidden'}`}>
                     <Pagination currentPage={personalPage} totalPages={Math.ceil(projects.length / 4)}
                                 onPageChange={personalPageChange}
                                 previousLabel={strings['pagination.previous']}

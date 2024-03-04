@@ -13,15 +13,15 @@ export const flowbiteTheme: CustomFlowbiteTheme = {
             'base': 'xs:mt-0 mt-2 inline-flex items-center -space-x-px',
             'showIcon': 'inline-flex',
             'previous': {
-                'base': 'prevButton ml-0 rounded-l-lg border border-white bg-transparent py-2 px-3 leading-tight text-white',
+                'base': 'prevButton ml-0 rounded-l-lg border dark:border-white bg-transparent py-2 px-3 leading-tight dark:text-white text-gray-800',
                 'icon': 'h-5 w-5'
             },
             'next': {
-                'base': 'nextButton rounded-r-lg border border-white bg-transparent py-2 px-3 leading-tight text-white',
+                'base': 'nextButton rounded-r-lg border dark:border-white bg-transparent py-2 px-3 leading-tight dark:text-white text-gray-800',
                 'icon': 'h-5 w-5'
             },
             'selector': {
-                'base': 'w-12 border border-gray-300 bg-transparent py-2 leading-tight text-white hover:bg-cyan-100 hover:text-cyan-700',
+                'base': 'w-12 border dark:border-gray-300 bg-transparent py-2 leading-tight text-white hover:bg-cyan-100 hover:text-cyan-700',
                 'active': 'bg-gray-200 text-blue-600',
                 'disabled': 'opacity-50 cursor-normal'
             }

@@ -51,7 +51,7 @@ export default function Home() {
                 <Image src={schoolImage} alt={'School'} className={`hidden md:block w-[25vw] h-auto ml-10`} />
             </section>
             <section
-                className={`pt-20 pb-20 flex flex-col md:flex-row justify-center items-center md:items-stretch md:justify-around gap-12`}
+                className={`pt-20 pb-20 flex flex-col md:flex-row justify-center items-center md:items-stretch gap-16`}
                 id={`projects`}>
                 <ProjectView projects={projects.personal} title={strings['projects.solo']} />
                 <ProjectView projects={projects.team} title={strings['projects.team']}
