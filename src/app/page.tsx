@@ -37,8 +37,8 @@ export default function Home() {
                 className={`mb-20 flex justify-between items-center w-full md:mt-20 bg-[#fff8f3] dark:bg-transparent`}
                 id={`myself`}>
                 <div className={`flex flex-col md:ml-20 md:mx-auto md:my-auto mx-6 my-8`}>
-                    <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} text-gradient bg-[linear-gradient(45deg,#0688fb_0%,#ac07f7_100%)] dark:bg-[linear-gradient(45deg,#FBDA61_0%,#FF5ACD_100%)] font-semibold`}>{strings['home.section.1.title']}</h2>
-                    <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-normal ${poppins.className} text-[1.35rem] md:text-[1.5rem] leading-[1.2em] md:mr-[5rem]`}>{getLocaleStringAsArgs(strings['home.section.1.text'])[0]}{new Date().getFullYear() - 2004}{getLocaleStringAsArgs(strings['home.section.1.text'])[2]}</p>
+                    <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} text-gradient bg-[linear-gradient(45deg,#0688fb_0%,#ac07f7_100%)] dark:bg-[linear-gradient(45deg,#2b9cff_0%,#ac07f7_100%)] font-semibold`}>{strings['home.section.1.title']}</h2>
+                    <p className={`pt-5 tracking-[.054em] max-w-4xl text-gray-800 dark:text-white font-medium ${poppins.className} text-[1.35rem] md:text-[1.5rem] leading-[1.2em] md:mr-[5rem]`}>{getLocaleStringAsArgs(strings['home.section.1.text'])[0]}{new Date().getFullYear() - 2004}{getLocaleStringAsArgs(strings['home.section.1.text'])[2]}</p>
                 </div>
                 <div className={`hidden md:flex h-full w-[35%] bg-[#6e8ef5] justify-center items-center`}>
                     <div className='h-full w-full overflow-hidden leading-[0] rotate-180'>
