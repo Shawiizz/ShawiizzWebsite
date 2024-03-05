@@ -34,7 +34,7 @@ export default function Home() {
                 </Link>
             </section>
             <section
-                className={`flex justify-between items-center md:w-full w-[90%] md:mt-20 bg-[#fff8f3] dark:bg-gray-800 rounded-lg shadow-xl`}
+                className={`md:mb-10 mb-0 flex justify-between items-center md:w-full w-[90%] md:mt-20 bg-[#fff8f3] dark:bg-gray-800 md:rounded-none rounded-lg md:shadow-none shadow-xl`}
                 id={`myself`}>
                 <div className={`flex flex-col md:ml-20 md:mx-auto md:my-auto mx-6 my-8`}>
                     <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} text-gradient bg-[linear-gradient(45deg,#0688fb_0%,#ac07f7_100%)] dark:bg-[linear-gradient(45deg,#2b9cff_0%,#ac07f7_100%)] font-semibold`}>{strings['home.section.1.title']}</h2>
@@ -55,7 +55,7 @@ export default function Home() {
                 </div>
             </section>
             <section
-                className={`mt-20 md:mb-20 flex flex-row-reverse justify-between items-center md:w-full w-[90%] bg-[#fff8f3] dark:bg-gray-800 rounded-lg shadow-xl`}
+                className={`mt-20 md:mb-20 flex flex-row-reverse justify-between items-center md:w-full w-[90%] bg-[#fff8f3] dark:bg-gray-800 md:rounded-none rounded-lg md:shadow-none shadow-xl`}
                 id={`studies`}>
                 <div className={`flex flex-col md:mr-20 md:mx-auto md:my-auto mx-6 my-8`}>
                     <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} text-gradient bg-[linear-gradient(180deg,#377cef_0%,#fa4bc8_100%)] dark:bg-[linear-gradient(180deg,#A9C9FF_0%,#FFBBEC_100%)] font-semibold`}>{strings['home.section.2.title']}</h2>
