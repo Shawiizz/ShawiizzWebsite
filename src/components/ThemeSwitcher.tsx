@@ -15,12 +15,14 @@ export default function ThemeSwitcher({ className }: { className?: string }) {
         // Change the icons inside the button based on previous settings
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             themeToggleLightIconRef.current.classList.remove('hidden')
+            document.documentElement.classList.add('dark')
             dispatch(setMode('dark'))
         } else {
+            document.documentElement.classList.remove('dark')
             themeToggleDarkIconRef.current.classList.remove('hidden')
             dispatch(setMode('light'))
         }
-    })
+    }, [])
 
     const themeButtonClickListener = function() {
         if (themeToggleLightIconRef.current === null || themeToggleDarkIconRef.current === null) return
