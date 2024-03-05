@@ -29,7 +29,7 @@ export const flowbiteTheme: CustomFlowbiteTheme = {
     },
     card: {
         'root': {
-            'base': 'flex rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-800 dark:bg-gray-900 h-fit',
+            'base': 'flex rounded-lg border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900 h-fit',
             'children': 'flex flex-col gap-4 p-6',
             'horizontal': {
                 'off': 'flex-col',

@@ -57,7 +57,15 @@ export default function Home() {
                 <ProjectView projects={projects.team} title={strings['projects.team']}
                              backgroundGradient={'teamGradient'} />
             </section>
-            <section className={`flex justify-evenly items-center md:w-full w-[90%] md:pt-20 pb-20`}
+            <div className='w-full overflow-hidden leading-[0] rotate-180 dark:hidden'>
+                <svg data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'
+                     className={`relative block w-[calc(100%_+_1.3px)] h-[60px]`}
+                     preserveAspectRatio='none'>
+                    <path d='M1200 120L0 16.48 0 0 1200 0 1200 120z' className='fill-gray-100'></path>
+                </svg>
+            </div>
+            <section
+                className={`flex justify-evenly items-center md:w-full w-[90%] md:pt-10 bg-gray-100 dark:bg-transparent`}
                      id={`technologies`}>
                 <div className={`flex flex-col justify-center items-center`}>
                     <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} techGradient font-semibold`}>{strings['home.section.tech.title']}</h2>
@@ -67,6 +75,15 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <div className='w-full overflow-hidden leading-[0] relative bottom-1 dark:hidden'>
+                <svg data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'
+                     className={`relative block w-[calc(100%_+_1.3px)] h-[60px]`}
+                     preserveAspectRatio='none'>
+                    <path
+                        d='M1200 120L0 16.48 0 0 1200 0 1200 120z'
+                        className='fill-gray-100'></path>
+                </svg>
+            </div>
             <section className={`flex justify-evenly items-center md:w-full w-[80%] md:pt-20 pb-20`} id={`skills`}>
                 <div className={`flex flex-col justify-center items-center`}>
                     <h2 className={`text-[3.8em] md:text-[4.5em] ${passionOne.className} skillsGradient font-semibold`}>{strings['home.competences.title']}</h2>

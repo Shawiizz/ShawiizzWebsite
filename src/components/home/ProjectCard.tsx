@@ -18,7 +18,7 @@ export const ProjectCard = ({ name, description, link, technologies }: Project) 
 
     return (
         <Card
-            className='max-w-sm dark:bg-gray-700 border border-gray-300 dark:border-none mr-4 ml-4 md:mr-0 md:ml-0'>
+            className='max-w-sm dark:bg-gray-700 border border-gray-300 dark:border-none mr-4 ml-4 md:mr-0 md:ml-0 mt-4 md:mt-0 shadow-md hover:shadow-lg transition duration-300 ease-in-out'>
             <h5 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
                 {name}
             </h5>
@@ -27,9 +27,9 @@ export const ProjectCard = ({ name, description, link, technologies }: Project) 
             </p>
             <div className={`flex flex-row gap-2`}>
                 <Tooltip content={
-                    <div className={`flex flex-col dark:bg-gray-900`}>
-                        <p className={`font-bold text-center text-lg mt-2 mb-2`}>{strings['header.technologies']}</p>
-                        <div className='my-1 h-px bg-gray-100 dark:bg-gray-600'></div>
+                    <div className={`flex flex-col dark:bg-gray-900 bg-gray-100`}>
+                        <p className={`text-gray-800 dark:text-white font-bold text-center text-lg mt-2 mb-2`}>{strings['header.technologies']}</p>
+                        <div className='my-1 h-px bg-gray-300 dark:bg-gray-600'></div>
                         <div className={`flex justify-start mt-4 flex-wrap gap-4`}>
                             {technologies?.map((tech, index) => {
                                     return (
@@ -37,14 +37,14 @@ export const ProjectCard = ({ name, description, link, technologies }: Project) 
                                            target={`_blank`}>
                                             <Image src={mode === 'dark' ? tech.icon.dark : tech.icon.white}
                                                    alt={tech.displayName} width={32} height={32} />
-                                            <p>{tech.displayName}</p>
+                                            <p className={`dark:text-white text-gray-800`}>{tech.displayName}</p>
                                         </a>
                                     )
                                 }
                             )}
                         </div>
                     </div>
-                } className={`dark:bg-gray-900 pb-4 max-w-sm`}>
+                } className={`bg-gray-100 dark:bg-gray-900 pb-4 max-w-sm`}>
                     <Button color={`gray`} onClick={technologyClick}>
                         {strings['header.technologies']}
                     </Button>
