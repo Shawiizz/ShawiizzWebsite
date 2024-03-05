@@ -4,7 +4,7 @@ const frTranslation = {
     strings: {
         'home.subtitle': 'PORTFOLIO',
         'home.section.1.title': 'Qui suis-je ?',
-        'home.section.1.text': 'Salut ! Je m\'appelle Maël, aussi connu sous le nom de Shawiiz_z, et j\'ai % % ans. J\'adore les nouvelles technologies et la programmation, et j\'apprends à coder par moi-même depuis quelques années. J\'ai déjà réalisé quelques projets personnels et aussi des projets en équipe. J\'utiliseprincipalement les langages JavaScript, Java, HTML et CSS, et j\'aime la communauté open source ainsi que développer des projets avec mes amis.',
+        'home.section.1.text': 'Salut ! Je m\'appelle Maël, aussi connu sous le nom de Shawiiz_z, et j\'ai % % ans. J\'adore les nouvelles technologies et la programmation, et j\'apprends à coder par moi-même depuis quelques années. J\'ai déjà réalisé quelques projets personnels et aussi des projets en équipe. J\'utilise principalement les langages JavaScript, Java, HTML et CSS, et j\'aime la communauté open source ainsi que développer des projets avec mes amis.',
         'home.section.2.title': 'Mes études',
         'home.section.2.text': 'J\'ai commencé à apprendre le code par moi-même en 2019, en faisant de la programmation en Java. Quand j\'étais au lycée, j\'ai prit la spécialité Système d\'information et numérique de la filière STI2D pour en apprendre plus sur la programmation et les nouvelles technologies. Je suis actuellement en BUT Informatique à l\'IUT Lyon 1 et je vais continuer dans cette voie, pour ensuite travailler dans l\'informatique.',
         'home.section.contact.title': 'Contact',
