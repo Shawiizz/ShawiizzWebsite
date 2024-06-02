@@ -15,7 +15,7 @@ export interface Projects {
     team: Project[];
 }
 
-export const projects: Projects = {
+export const projectsPerCategory: Projects = {
     personal: [
         {
             name: 'Github auto pull',
@@ -75,3 +75,5 @@ export const projects: Projects = {
         }
     ]
 }
+
+export const projects: Project[] = [...projectsPerCategory.personal, ...projectsPerCategory.team]

@@ -41,9 +41,6 @@ const enTranslation: PartialLocaleState = {
         'header.skills': 'Skills',
         'header.contact': 'Contact',
         'header.technologies': 'Technologies',
-        'tech.level.beginner': 'Beginner',
-        'tech.level.intermediate': 'Intermediate',
-        'tech.level.advanced': 'Advanced',
         'home.level': 'Level: ',
         'tech.type.language': 'Language',
         'tech.type.framework': 'Framework',
@@ -51,9 +48,12 @@ const enTranslation: PartialLocaleState = {
         'tech.type.tool': 'Tool',
         'tech.type.software': 'Software',
         'home.section.tech.title': 'Technologies',
-        'home.section.tech.text': 'Here are the technologies I use everyday and my level in each of them. You can click on the tabs to see the technologies of each type.',
+        'home.section.tech.text': 'I already used:',
         'pagination.previous': 'Previous',
-        'pagination.next': 'Next'
+        'pagination.next': 'Next',
+        'tech.show.related.projects': 'Show related projects',
+        'projects.usedin': 'used in:',
+        'button.close': 'Close',
     }
 }
 

@@ -93,29 +93,13 @@ export const TECHNOLOGIES_TYPES: Record<string, TechnologyType> = {
     }
 }
 
-export type TechnologyDisplayName = 'tech.level.beginner' | 'tech.level.intermediate' | 'tech.level.advanced';
-
-export interface TechnologyLevel {
-    displayName: TechnologyDisplayName,
-    level: number
-}
-
-export const technologyLevels: Record<string, TechnologyLevel> = {
-    beginner: {
-        displayName: 'tech.level.beginner',
-        level: 1
-    },
-    intermediate: {
-        displayName: 'tech.level.intermediate',
-        level: 2
-    },
-    advanced: {
-        displayName: 'tech.level.advanced',
-        level: 3
-    }
-}
-
 export type TechnologyTypeKeys = keyof typeof TECHNOLOGIES_TYPES;
+
+export const technologyLevels = {
+    top: 1,
+    middle: 2,
+    bottom: 3
+}
 
 export interface Technology {
     displayName: string,
@@ -124,11 +108,11 @@ export interface Technology {
         white: StaticImport
     },
     type: TechnologyTypeKeys[],
-    level: keyof typeof technologyLevels,
+    showPriority: 'bottom' | 'middle' | 'top',
     homepage: string
 }
 
-const technologies = {
+const technologies: Record<string, Technology> = {
     androidstudio: {
         displayName: 'Android Studio',
         icon: {
@@ -136,7 +120,7 @@ const technologies = {
             white: androidstudiowhite
         },
         type: ['software'],
-        level: 'beginner',
+        showPriority: 'bottom',
         homepage: 'https://developer.android.com/studio'
     },
     arduino: {
@@ -146,7 +130,7 @@ const technologies = {
             white: arduino
         },
         type: ['software', 'language'],
-        level: 'intermediate',
+        showPriority: 'middle',
         homepage: 'https://www.arduino.cc/'
     },
     bash: {
@@ -156,7 +140,7 @@ const technologies = {
             white: bashwhite
         },
         type: ['software'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://www.gnu.org/software/bash/'
     },
     c: {
@@ -166,7 +150,7 @@ const technologies = {
             white: c
         },
         type: ['language'],
-        level: 'intermediate',
+        showPriority: 'middle',
         homepage: 'https://en.wikipedia.org/wiki/C_(programming_language)'
     },
     cloudflare: {
@@ -176,7 +160,7 @@ const technologies = {
             white: cloudflarewhite
         },
         type: ['tool'],
-        level: 'intermediate',
+        showPriority: 'middle',
         homepage: 'https://www.cloudflare.com/'
     },
     css: {
@@ -186,7 +170,7 @@ const technologies = {
             white: css
         },
         type: ['language'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
     },
     dart: {
@@ -196,7 +180,7 @@ const technologies = {
             white: dartwhite
         },
         type: ['language'],
-        level: 'beginner',
+        showPriority: 'bottom',
         homepage: 'https://dart.dev/'
     },
     electronjs: {
@@ -206,7 +190,7 @@ const technologies = {
             white: electron
         },
         type: ['framework'],
-        level: 'beginner',
+        showPriority: 'bottom',
         homepage: 'https://www.electronjs.org/'
     },
     expressjs: {
@@ -216,7 +200,7 @@ const technologies = {
             white: expresswhite
         },
         type: ['framework'],
-        level: 'intermediate',
+        showPriority: 'middle',
         homepage: 'https://expressjs.com/'
     },
     figma: {
@@ -226,7 +210,7 @@ const technologies = {
             white: figmalight
         },
         type: ['tool'],
-        level: 'intermediate',
+        showPriority: 'middle',
         homepage: 'https://www.figma.com/'
     },
     flutter: {
@@ -236,7 +220,7 @@ const technologies = {
             white: flutterlight
         },
         type: ['language'],
-        level: 'beginner',
+        showPriority: 'bottom',
         homepage: 'https://flutter.dev/'
     },
     git: {
@@ -246,7 +230,7 @@ const technologies = {
             white: git
         },
         type: ['tool'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://git-scm.com/'
     },
     github: {
@@ -256,7 +240,7 @@ const technologies = {
             white: githublight
         },
         type: ['tool'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://github.com'
     },
     gradle: {
@@ -266,7 +250,7 @@ const technologies = {
             white: gradlelight
         },
         type: ['tool'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://gradle.org/'
     },
     html: {
@@ -276,7 +260,7 @@ const technologies = {
             white: html
         },
         type: ['language'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
     },
     idea: {
@@ -286,7 +270,7 @@ const technologies = {
             white: idealight
         },
         type: ['software'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://www.jetbrains.com/idea/'
     },
     java: {
@@ -296,7 +280,7 @@ const technologies = {
             white: javalight
         },
         type: ['language'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://www.java.com/'
     },
     js: {
@@ -306,7 +290,7 @@ const technologies = {
             white: js
         },
         type: ['language'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
     },
     linux: {
@@ -316,7 +300,7 @@ const technologies = {
             white: linuxlight
         },
         type: ['software', 'tool'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://www.linux.org/'
     },
     md: {
@@ -326,7 +310,7 @@ const technologies = {
             white: markdownlight
         },
         type: ['tool'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://www.markdownguide.org/'
     },
     mongodb: {
@@ -336,7 +320,7 @@ const technologies = {
             white: mongodb
         },
         type: ['database'],
-        level: 'beginner',
+        showPriority: 'bottom',
         homepage: 'https://www.mongodb.com/'
     },
     mysql: {
@@ -346,7 +330,7 @@ const technologies = {
             white: mysqllight
         },
         type: ['database'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://www.mysql.com/'
     },
     next: {
@@ -356,7 +340,7 @@ const technologies = {
             white: nextjslight
         },
         type: ['framework'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://nextjs.org/'
     },
     nginx: {
@@ -366,7 +350,7 @@ const technologies = {
             white: nginx
         },
         type: ['software', 'tool'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://www.nginx.com/'
     },
     node: {
@@ -376,7 +360,7 @@ const technologies = {
             white: nodejslight
         },
         type: ['language'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://nodejs.org/'
     },
     php: {
@@ -386,7 +370,7 @@ const technologies = {
             white: phplight
         },
         type: ['language'],
-        level: 'intermediate',
+        showPriority: 'middle',
         homepage: 'https://www.php.net/'
     },
     postgre: {
@@ -396,7 +380,7 @@ const technologies = {
             white: postgreslight
         },
         type: ['database'],
-        level: 'intermediate',
+        showPriority: 'middle',
         homepage: 'https://www.postgresql.org/'
     },
     python: {
@@ -406,7 +390,7 @@ const technologies = {
             white: pylight
         },
         type: ['language'],
-        level: 'intermediate',
+        showPriority: 'middle',
         homepage: 'https://www.python.org/'
     },
     rpi: {
@@ -416,7 +400,7 @@ const technologies = {
             white: raspberrypilight
         },
         type: ['software', 'tool'],
-        level: 'intermediate',
+        showPriority: 'middle',
         homepage: 'https://www.raspberrypi.org/'
     },
     react: {
@@ -426,7 +410,7 @@ const technologies = {
             white: reactlight
         },
         type: ['framework'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://reactjs.org/'
     },
     symfony: {
@@ -436,7 +420,7 @@ const technologies = {
             white: symfonylight
         },
         type: ['framework'],
-        level: 'beginner',
+        showPriority: 'bottom',
         homepage: 'https://symfony.com/'
     },
     tailwind: {
@@ -446,7 +430,7 @@ const technologies = {
             white: tailwindlight
         },
         type: ['framework'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://tailwindcss.com/'
     },
     ts: {
@@ -456,7 +440,7 @@ const technologies = {
             white: ts
         },
         type: ['language'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://www.typescriptlang.org/'
     },
     vscode: {
@@ -466,7 +450,7 @@ const technologies = {
             white: vscodelight
         },
         type: ['software'],
-        level: 'advanced',
+        showPriority: 'top',
         homepage: 'https://code.visualstudio.com/'
     },
     vue: {
@@ -476,7 +460,7 @@ const technologies = {
             white: vuelight
         },
         type: ['framework'],
-        level: 'beginner',
+        showPriority: 'bottom',
         homepage: 'https://vuejs.org/'
     }
 }
