@@ -22,7 +22,7 @@ export default function AnimatedTitle() {
         }
 
         async function executeTextAnimations() {
-            await textAnimation('Shawiiz_z')
+            await textAnimation('Maël Feri')
             await textAnimation(getCurrentLocale().strings['home.title.animation.1'], 500, 100, 50)
             await textAnimation(getCurrentLocale().strings['home.title.animation.2'], 200, 100, 50)
             await textAnimation(getCurrentLocale().strings['home.title.animation.3'], 200, 100, 50)

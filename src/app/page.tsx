@@ -106,7 +106,7 @@ export default function Home() {
                     <p className={`pb-5 text-2xl tracking-[.054em] font-bold`}>{strings['home.section.contact.text']}</p>
                     <p>{strings['home.section.contact.discord']} <Link
                         href={`https://discord.com/users/436832490263412736`}
-                        className={`decoration-0 tracking-[.054em] font-extralight`}>shawiiz_z</Link>
+                        className={`decoration-0 tracking-[.054em] font-extralight`}>Maël Feri</Link>
                     </p>
                     <p>{strings['home.section.contact.mail']} <Link href={`mailto:shaweereso@gmail.com`}
                                                                     className={`decoration-0 tracking-[.054em] font-extralight`}>shaweereso@gmail.com</Link>

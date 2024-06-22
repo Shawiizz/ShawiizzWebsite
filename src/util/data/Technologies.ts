@@ -64,9 +64,10 @@ import vuedark from '../../../public/skill-icon/VueJS-Dark.svg'
 import vuelight from '../../../public/skill-icon/VueJS-Light.svg'
 import { IconType } from 'react-icons'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+import { HiAcademicCap, HiCpuChip } from 'react-icons/hi2'
 
 export interface TechnologyType {
-    displayName: 'tech.type.language' | 'tech.type.framework' | 'tech.type.tool' | 'tech.type.database' | 'tech.type.software',
+    displayName: 'tech.type.language' | 'tech.type.framework' | 'tech.type.tool' | 'tech.type.database' | 'tech.type.software' | 'tech.type.hardware' | 'tech.type.other',
     icon: IconType
 }
 
@@ -90,6 +91,14 @@ export const TECHNOLOGIES_TYPES: Record<string, TechnologyType> = {
     software: {
         displayName: 'tech.type.software',
         icon: HiDesktopComputer
+    },
+    hardware: {
+        displayName: 'tech.type.hardware',
+        icon: HiCpuChip
+    },
+    other: {
+        displayName: 'tech.type.other',
+        icon: HiAcademicCap
     }
 }
 
@@ -129,7 +138,7 @@ const technologies: Record<string, Technology> = {
             dark: arduino,
             white: arduino
         },
-        type: ['software', 'language'],
+        type: ['hardware'],
         showPriority: 'middle',
         homepage: 'https://www.arduino.cc/'
     },
@@ -139,7 +148,7 @@ const technologies: Record<string, Technology> = {
             dark: bashdark,
             white: bashwhite
         },
-        type: ['software'],
+        type: ['tool'],
         showPriority: 'top',
         homepage: 'https://www.gnu.org/software/bash/'
     },
@@ -209,7 +218,7 @@ const technologies: Record<string, Technology> = {
             dark: figmadark,
             white: figmalight
         },
-        type: ['tool'],
+        type: ['software'],
         showPriority: 'middle',
         homepage: 'https://www.figma.com/'
     },
@@ -299,7 +308,7 @@ const technologies: Record<string, Technology> = {
             dark: linuxdark,
             white: linuxlight
         },
-        type: ['software', 'tool'],
+        type: ['software'],
         showPriority: 'top',
         homepage: 'https://www.linux.org/'
     },
@@ -349,7 +358,7 @@ const technologies: Record<string, Technology> = {
             dark: nginx,
             white: nginx
         },
-        type: ['software', 'tool'],
+        type: ['software'],
         showPriority: 'top',
         homepage: 'https://www.nginx.com/'
     },
@@ -359,7 +368,7 @@ const technologies: Record<string, Technology> = {
             dark: nodejsdark,
             white: nodejslight
         },
-        type: ['language'],
+        type: ['framework'],
         showPriority: 'top',
         homepage: 'https://nodejs.org/'
     },
@@ -399,7 +408,7 @@ const technologies: Record<string, Technology> = {
             dark: raspberrypidark,
             white: raspberrypilight
         },
-        type: ['software', 'tool'],
+        type: ['hardware'],
         showPriority: 'middle',
         homepage: 'https://www.raspberrypi.org/'
     },

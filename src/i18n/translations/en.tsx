@@ -6,9 +6,9 @@ const enTranslation: PartialLocaleState = {
     strings: {
         'home.subtitle': 'PORTFOLIO',
         'home.section.1.title': 'Who am I?',
-        'home.section.1.text': 'Hello, my name is Maël, also known as Shawiiz_z, and I\'m % % years old. I love computer science and programming, and I\'m learning code by myself since a few years. I have realized some personal project and also team projects, and I\'m mainly using JavaScript, Java, HTML and CSS languages. I like the open source community and developing projects with my friends.',
+        'home.section.1.text': 'Hi! My name is Maël Feri, also known by the pseudonym Shawiiz_z. I am % % years old and I am passionate about computers and programming. I have been learning to code by putting theory into practice for several years. Outside of computing, I love biking, playing badminton, and I am also learning to play the electric guitar.',
         'home.section.2.title': 'My studies',
-        'home.section.2.text': 'I started to learn the code by myself in 2019, by practicing Java programming. When I was in high school, I took the Information and Digital Systems speciality to learn more about computers and programming. I am currently studying Computer Science at the IUT Lyon 1 and I plan to continue my studies in this field to make my career.',
+        'home.section.2.text': 'I started learning to code on my own in 2019, diving into Java programming. In high school, I chose the Information and Digital Systems specialty in the STI2D track to deepen my knowledge of programming and new technologies. Currently, I am in my second year of a Bachelor\'s in Computer Science at IUT Lyon 1, and I plan to continue on this path to work in the field of computer science.',
         'home.section.contact.title': 'Contact',
         'home.section.contact.text': 'You can talk to me using:',
         'home.section.contact.discord': 'Discord:',
@@ -22,10 +22,11 @@ const enTranslation: PartialLocaleState = {
         'project.assetsdl.description': 'An open source project that enable developers to download Minecraft assets.',
         'project.lla.description': 'A tiny high school project that upload an Instagram story of the self menu of the week.',
         'project.mohist.description': 'Mohist is an open source Minecraft server software supporting Forge mods and Bukkit/Spigot plugins in the same server.',
-        'project.plumeo.description': 'Pluméo is a social network project, which is private for now. I am working on it with my friend, %Vrock691%.',
+        'project.plumeo.description': 'Pluméo is a secure and instant messaging web application, developed over a period of 2 years.',
         'project.pufferpanel.description': 'Open source api wrapper to communicate with your self-hosted PufferPanel installation.',
         'project.tomuss.description': 'Another open source api wrapper to communicate with Tomuss (Lyon 1) to get your grades.',
         'project.mohistweb.description': 'New MohistMC\'s website made with Next.js.',
+        'project.collaborators': 'Collaborators',
         'button.language': 'Language',
         'button.sourcecode': 'Source code',
         'home.title.animation.1': 'Welcome',
@@ -47,6 +48,8 @@ const enTranslation: PartialLocaleState = {
         'tech.type.database': 'Database',
         'tech.type.tool': 'Tool',
         'tech.type.software': 'Software',
+        'tech.type.hardware': 'Hardware',
+        'tech.type.other': 'Other',
         'home.section.tech.title': 'Technologies',
         'home.section.tech.text': 'I already used:',
         'pagination.previous': 'Previous',
@@ -54,6 +57,9 @@ const enTranslation: PartialLocaleState = {
         'tech.show.related.projects': 'Show related projects',
         'projects.usedin': 'used in:',
         'button.close': 'Close',
+        'metadata.title': 'Maël Feri\'s website',
+        'metadata.description': 'Maël Feri\'s portfolio website, computer science student. Discover my projects, my skills and how to contact me.',
+        'header.cv': 'My CV',
     }
 }
 

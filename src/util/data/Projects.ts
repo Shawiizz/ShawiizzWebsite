@@ -2,12 +2,14 @@ import githubImage from '../../../public/github.png'
 import plumeoImage from '../../../public/plumeo.png'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import { Technologies, Technology } from '@/util/data/Technologies'
+import { Person, persons } from '@/util/data/Person'
 
 export interface Project {
     name: string;
     description: string;
     link: { href: string; image: StaticImport };
-    technologies?: Technology[]
+    technologies?: Technology[],
+    persons?: Person[]
 }
 
 export interface Projects {
@@ -65,13 +67,22 @@ export const projectsPerCategory: Projects = {
             name: 'Mohist',
             description: 'project.mohist.description',
             link: { href: 'https://github.com/MohistMC/Mohist', image: githubImage },
-            technologies: [Technologies.java, Technologies.git]
+            technologies: [Technologies.java, Technologies.git],
+            persons: [persons.mgazul]
         },
         {
             name: 'Pluméo',
             description: 'project.plumeo.description',
             link: { href: 'https://vrock691.web.app', image: plumeoImage },
-            technologies: [Technologies.js, Technologies.expressjs, Technologies.node, Technologies.ts, Technologies.react, Technologies.next, Technologies.cloudflare, Technologies.git]
+            technologies: [Technologies.js, Technologies.expressjs, Technologies.node, Technologies.ts, Technologies.react, Technologies.next, Technologies.cloudflare, Technologies.git],
+            persons: [persons.vrock691]
+        },
+        {
+            name: '12cm3',
+            description: 'project.12cm3.description',
+            link: { href: '#', image: githubImage },
+            technologies: [Technologies.php, Technologies.java, Technologies.git],
+            persons: [persons.elouanrival, persons.rayantail, persons.lomebordes]
         }
     ]
 }

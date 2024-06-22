@@ -1,14 +1,8 @@
-import type { Metadata } from 'next'
 import './globals.css'
 import { ReactNode } from 'react'
-import Header from '@/components/Header'
 import { quicksand } from '@/app/fonts'
 import Providers from '@/app/Provider'
-
-export const metadata: Metadata = {
-    title: 'Shawiiz_z\'s Portfolio',
-    description: 'Welcome to my portfolio'
-}
+import { InnerLayout } from '@/layout/InnerLayout'
 
 export default function RootLayout({
                                        children
@@ -20,8 +14,9 @@ export default function RootLayout({
         <body className={quicksand.className}>
         <div className={`fixed w-full h-screen dark:bg-[linear-gradient(black,#00001c)] -z-10`}></div>
         <Providers>
-            <Header />
-            {children}
+            <InnerLayout>
+                {children}
+            </InnerLayout>
         </Providers>
         </body>
         </html>

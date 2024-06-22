@@ -1,8 +1,8 @@
 import frTranslation from '@/i18n/translations/fr'
 import enTranslation from '@/i18n/translations/en'
 import { LocaleState } from '@/features/i18n/TranslatorSlice'
-import FrenchFlag from '@/components/flags/FrenchFlag'
-import EnglishFlag from '@/components/flags/EnglishFlag'
+import FrenchFlag from '@/components/icons/flags/FrenchFlag'
+import EnglishFlag from '@/components/icons/flags/EnglishFlag'
 
 const availableLocales = [frTranslation, enTranslation]
 

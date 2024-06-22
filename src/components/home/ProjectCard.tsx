@@ -5,8 +5,11 @@ import { selectTranslations, StringKey } from '@/features/i18n/TranslatorSlice'
 import { Button, Card, Tooltip } from 'flowbite-react'
 import React from 'react'
 import { selectTheme } from '@/features/theme/ThemeSlice'
+import { UsersIcon } from '@/components/icons/UsersIcon'
+import { TECHNOLOGIES_TYPES } from '@/util/data/Technologies'
+import { UserIcon } from '@/components/icons/UserIcon'
 
-export const ProjectCard = ({ name, description, link, technologies }: Project) => {
+export const ProjectCard = ({ name, description, link, technologies, persons }: Project) => {
     const strings = useAppSelector(selectTranslations)
     const mode = useAppSelector(selectTheme)
 
@@ -19,8 +22,33 @@ export const ProjectCard = ({ name, description, link, technologies }: Project) 
     return (
         <Card
             className='max-w-sm dark:bg-gray-700 border border-gray-300 dark:border-none mr-4 ml-4 md:mr-0 md:ml-0 mt-4 md:mt-0 shadow-md hover:shadow-lg transition duration-300 ease-in-out'>
-            <h5 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+            <h5 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white flex flex-row items-center'>
                 {name}
+                {persons?.length && <Tooltip content={
+                    <div className={`flex flex-col dark:bg-gray-900 bg-gray-100`}>
+                        <p className={`text-gray-800 dark:text-white font-bold text-center text-lg mt-2 mb-2`}>{strings['project.collaborators']}</p>
+                        <div className='my-1 h-px bg-gray-300 dark:bg-gray-600'></div>
+                        <div className={`flex justify-start mt-4 flex-wrap gap-4`}>
+                            {
+                                persons?.map((person, index) => {
+                                    return (
+                                        <a key={index} className={`flex flex-row gap-2 items-center flex-wrap`} href={person.link}
+                                           target={`_blank`}>
+                                            {person?.icon ? <Image src={person.icon as string} alt={person.name} width={32} height={32} /> : <UserIcon />}
+                                            <p className={`dark:text-white text-gray-800`}>{person.name}</p>
+                                        </a>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                } className={`bg-gray-100 dark:bg-gray-900 pb-4 max-w-sm`}>
+                    <span
+                        className='ml-3 bg-blue-600 rounded-full bg-opacity-75 w-14 h-7 p-1.5 flex items-center justify-center'>
+                    <UsersIcon />
+                    <p className={`text-lg ml-0.5 font-semibold text-white`}>{persons.length}</p>
+                    </span>
+                </Tooltip>}
             </h5>
             <p className='font-normal text-gray-700 dark:text-gray-300'>
                 {strings.hasOwnProperty(description) ? strings[description as StringKey] : description}
@@ -31,17 +59,28 @@ export const ProjectCard = ({ name, description, link, technologies }: Project) 
                         <p className={`text-gray-800 dark:text-white font-bold text-center text-lg mt-2 mb-2`}>{strings['header.technologies']}</p>
                         <div className='my-1 h-px bg-gray-300 dark:bg-gray-600'></div>
                         <div className={`flex justify-start mt-4 flex-wrap gap-4`}>
-                            {technologies?.map((tech, index) => {
-                                    return (
-                                        <a key={index} className={`flex flex-row gap-2 items-center`} href={tech.homepage}
-                                           target={`_blank`}>
-                                            <Image src={mode === 'dark' ? tech.icon.dark : tech.icon.white}
-                                                   alt={tech.displayName} width={32} height={32} />
-                                            <p className={`dark:text-white text-gray-800`}>{tech.displayName}</p>
-                                        </a>
-                                    )
-                                }
-                            )}
+                            {
+                                Object.entries(TECHNOLOGIES_TYPES).map((type) => {
+                                    const technologiesFiltered = technologies?.filter(tech => tech.type.includes(type[0])) ?? [];
+
+                                    return technologiesFiltered.length ? (
+                                        <div className={`flex flex-col gap-2`}>
+                                            <p>{strings[type[1].displayName]}</p>
+                                            {technologiesFiltered?.map((tech, index) => {
+                                                    return (
+                                                        <a key={index} className={`flex flex-row gap-2 items-center`} href={tech.homepage}
+                                                           target={`_blank`}>
+                                                            <Image src={mode === 'dark' ? tech.icon.dark : tech.icon.white}
+                                                                   alt={tech.displayName} width={32} height={32} />
+                                                            <p className={`dark:text-white text-gray-800`}>{tech.displayName}</p>
+                                                        </a>
+                                                    )
+                                                }
+                                            )}
+                                        </div>
+                                    ) : <></>
+                                })
+                            }
                         </div>
                     </div>
                 } className={`bg-gray-100 dark:bg-gray-900 pb-4 max-w-sm`}>
