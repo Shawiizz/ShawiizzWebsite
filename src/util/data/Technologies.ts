@@ -62,6 +62,8 @@ import vscodedark from '../../../public/skill-icon/VSCode-Dark.svg'
 import vscodelight from '../../../public/skill-icon/VSCode-Light.svg'
 import vuedark from '../../../public/skill-icon/VueJS-Dark.svg'
 import vuelight from '../../../public/skill-icon/VueJS-Light.svg'
+import kotlindark from '../../../public/skill-icon/Kotlin-Dark.svg'
+import kotlinwhite from '../../../public/skill-icon/Kotlin-Light.svg'
 import { IconType } from 'react-icons'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import { HiAcademicCap, HiCpuChip } from 'react-icons/hi2'
@@ -471,6 +473,16 @@ const technologies: Record<string, Technology> = {
         type: ['framework'],
         showPriority: 'bottom',
         homepage: 'https://vuejs.org/'
+    },
+    kotlin: {
+        displayName: 'Kotlin',
+        icon: {
+            dark: kotlindark,
+            white: kotlinwhite
+        },
+        type: ['language'],
+        showPriority: 'bottom',
+        homepage: 'https://kotlinlang.org/'
     }
 }
 

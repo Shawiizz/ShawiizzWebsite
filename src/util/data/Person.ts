@@ -28,5 +28,17 @@ export const persons: Record<string, Person> = {
     mgazul: {
         name: 'Mgazul',
         link: '#',
+    },
+    mylanrobinet: {
+        name: 'Mylan Robinet',
+        link: '#',
+    },
+    martinducros: {
+        name: 'Martin Ducros',
+        link: '#',
+    },
+    lucaslaiguillon: {
+        name: 'Lucas Laiguillon',
+        link: '#',
     }
 }

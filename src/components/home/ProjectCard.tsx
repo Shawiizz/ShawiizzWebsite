@@ -65,7 +65,7 @@ export const ProjectCard = ({ name, description, link, technologies, persons }: 
 
                                     return technologiesFiltered.length ? (
                                         <div className={`flex flex-col gap-2`}>
-                                            <p>{strings[type[1].displayName]}</p>
+                                            <p className={`text-black dark:text-white`}>{strings[type[1].displayName]}</p>
                                             {technologiesFiltered?.map((tech, index) => {
                                                     return (
                                                         <a key={index} className={`flex flex-row gap-2 items-center`} href={tech.homepage}

@@ -83,6 +83,34 @@ export const projectsPerCategory: Projects = {
             link: { href: '#', image: githubImage },
             technologies: [Technologies.php, Technologies.java, Technologies.git],
             persons: [persons.elouanrival, persons.rayantail, persons.lomebordes]
+        },
+        {
+            name: 'Pathfinder',
+            description: 'project.pathfinder.description',
+            link: { href: '#', image: githubImage },
+            technologies: [Technologies.java, Technologies.git],
+            persons: [persons.mylanrobinet]
+        },
+        {
+            name: 'Annuaire',
+            description: 'project.annuaire.description',
+            link: { href: '#', image: githubImage },
+            technologies: [Technologies.c, Technologies.git],
+            persons: [persons.elouanrival, persons.rayantail, persons.lomebordes]
+        },
+        {
+            name: 'Kebab 12',
+            description: 'project.kebab12.description',
+            link: { href: '#', image: githubImage },
+            technologies: [Technologies.html, Technologies.css, Technologies.js, Technologies.git],
+            persons: [persons.martinducros]
+        },
+        {
+            name: 'TCL routes',
+            description: 'project.tclroutes.description',
+            link: { href: '#', image: githubImage },
+            technologies: [Technologies.kotlin, Technologies.java, Technologies.git],
+            persons: [persons.lucaslaiguillon]
         }
     ]
 }
